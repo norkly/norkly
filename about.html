@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About · Elizabeth Vavilova Del Rio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --ink: #111111; --muted: #6b6b6b; --line: #e2e2e2; --chip: #ececec; --frame: #e4e4e4; --dark: #3A3A3A;
+    --gutter: 28px; --gap: 12px; --radius: 12px;
+    --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.35; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  em { font-style: normal; font-weight: 600; }
+  .ph { background: var(--frame); color: var(--muted); font-size: 12px; display: grid; place-items: center; border-radius: var(--radius); }
+
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 18px var(--gutter); font-size: 14px; }
+  .bar .right { display: flex; gap: 22px; }
+  .bar a:hover, .bar a.on { text-decoration: underline; text-underline-offset: 3px; }
+
+  /* hero: portrait + statement */
+  .hero { padding: 5vh var(--gutter) 0; display: grid; grid-template-columns: minmax(240px, 380px) 1fr; gap: 56px; align-items: start; }
+  .portrait { aspect-ratio: 1; border-radius: var(--radius); overflow: hidden; background: var(--frame); }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero h1 { margin: 0; max-width: 20ch; font-weight: 400; font-size: clamp(30px, 3.8vw, 58px); line-height: 1.06; letter-spacing: -.03em; }
+  .hero .bio { max-width: 58ch; margin: 28px 0 0; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; color: #2b2b2b; }
+  .hero .bio + .bio { margin-top: 14px; }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+  .hero .cta a { font-size: 14px; padding: 10px 15px; border-radius: 999px; background: var(--chip); }
+  .hero .cta a.primary { background: var(--dark); color: #fff; }
+
+  /* sections */
+  section.block { padding: 72px var(--gutter) 0; }
+  .block h2 { margin: 0 0 24px; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+
+  /* experience rows */
+  .exp { list-style: none; margin: 0; padding: 0; }
+  .exp li { display: grid; grid-template-columns: 150px 1fr 1fr; gap: 28px; padding: 20px 0; border-top: 1px solid var(--line); align-items: start; }
+  .exp li:last-child { border-bottom: 1px solid var(--line); }
+  .exp .years { font-size: 14px; color: var(--muted); padding-top: 4px; }
+  .exp h3 { margin: 0; font-weight: 600; font-size: clamp(18px, 1.5vw, 22px); letter-spacing: -.015em; }
+  .exp h3 span { display: block; font-weight: 400; color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .exp p { margin: 0; font-size: 15px; line-height: 1.5; color: #2b2b2b; max-width: 56ch; }
+
+  /* skills: 2 × 2 cells like the project pages */
+  .cells { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 48px; max-width: 1100px; }
+  .cell { border-top: 1px solid var(--line); padding-top: 16px; }
+  .cell h3 { margin: 0 0 10px; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .cell ul { list-style: none; margin: 0; padding: 0; font-size: clamp(15px, 1.15vw, 17px); line-height: 1.5; }
+  .cell li { padding: 7px 0; border-bottom: 1px solid var(--line); }
+  .cell li:last-child { border-bottom: 0; }
+  .tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .tools span { font-size: 13px; padding: 7px 12px; border-radius: 999px; background: var(--chip); }
+  .todo { color: var(--muted); font-size: 14px; }
+
+  /* dark footer */
+  .bottom { margin-top: 80px; background: var(--dark); color: #fff; }
+  .about { padding: 56px var(--gutter) 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+  .about h2 { margin: 0; max-width: 26ch; font-weight: 400; font-size: clamp(24px, 2.6vw, 38px); line-height: 1.1; letter-spacing: -.025em; }
+  .about .where { margin: 12px 0 0; color: #bdbdbd; font-size: 15px; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .contacts a { font-size: 14px; padding: 10px 15px; border-radius: 999px; background: #4f4f4f; }
+  .contacts a.primary { background: #fff; color: var(--ink); }
+  footer { padding: 48px var(--gutter) 30px; display: flex; justify-content: space-between; font-size: 13px; color: #bdbdbd; }
+
+  .rise { opacity: 0; transform: translateY(28px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rise, .reveal { opacity: 1; transform: none; animation: none; transition: none; } }
+
+  @media (max-width: 900px) {
+    :root { --gutter: 16px; }
+    .hero { grid-template-columns: 1fr; gap: 28px; }
+    .portrait { max-width: 240px; }
+    section.block { padding-top: 56px; }
+    .exp li { grid-template-columns: 1fr; gap: 8px; padding: 18px 0; }
+    .cells { grid-template-columns: 1fr; gap: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="index.html">Elizabeth Vavilova Del Rio</a>
+  <nav class="right">
+    <a href="index.html#work">Work</a>
+    <a class="on" href="about.html">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="portrait rise"><img src="assets/img/portrait.jpg" alt="Elizabeth Vavilova Del Rio"></div>
+  <div>
+    <h1 class="rise" style="--d:.08s">Brand designer with <em>ten years at IKEA</em>, now based in Belgrade and open to brand, retail and packaging projects.</h1>
+    <p class="bio rise" style="--d:.16s">I practice cross-disciplinary design: customer experience, retail design, brand identities and packaging. At IKEA I led graphic solutions for new stores and department rebuilds, art-directed commercial campaigns across 20 stores in Russia and Southeast Europe, and ran learning programs on brand identity for retail, marketing and sales teams.</p>
+    <p class="bio rise" style="--d:.2s">Alongside that, I design identities for small and growing businesses — thermal products, food delivery, construction, fitness — and work on art projects.</p>
+    <div class="cta rise" style="--d:.28s">
+      <a class="primary" href="https://www.linkedin.com/in/lizadelrio/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Experience</h2>
+  <ul class="exp reveal">
+    <li><div class="years">2022 – 2026</div><h3>Lead Graphic Designer <span>IKEA Service Office, Southeast Europe</span></h3><p>Art direction for 14 integrated 360° campaigns and key visuals; consistent POSM communication across 6 stores in 4 countries through guidelines and unified processes; a team of 3–4 specialists delivering omnichannel solutions for 6 stores. Mentored a regional team of 12 and delivered 11 training sessions on IKEA Visual Identity.</p></li>
+    <li><div class="years">2019 – 2022</div><h3>Senior Graphic Designer <span>IKEA Service Office, Russia</span></h3><p>Communication strategies and graphic solutions presented to 300+ stakeholders across Sales, Marketing and Store Design; Lead Designer with IKEA’s global team in Sweden on a department renewal implemented in 150+ stores worldwide; Agile-based redesign of the IKEA Russia homepage.</p></li>
+    <li><div class="years">2015 – 2019</div><h3>Graphic Communication Designer <span>IKEA Store, Russia</span></h3><p>End-to-end graphic communication projects from brief to implementation; in-store communication and retail graphic systems in 16 departments; onboarding materials and guidelines for new team members.</p></li>
+    <li><div class="years">2018 – 2026</div><h3>Art Director <span>Freelance</span></h3><p>Brand development from market research and concept through implementation and launch: visual identities, guidelines and communication systems for businesses in retail, food &amp; beverage, construction and wellness. Scalable brand systems consistent across packaging, advertising, digital and print, including long-term rebranding that supported franchise expansion and business growth.</p></li>
+  </ul>
+</section>
+
+<section class="block">
+  <h2>Skills</h2>
+  <div class="cells reveal">
+    <div class="cell"><h3>Brand &amp; strategy</h3><ul>
+      <li>Visual identity systems</li><li>Brand strategy and positioning</li><li>Brand audits and competitive analysis</li><li>Customer experience design</li>
+    </ul></div>
+    <div class="cell"><h3>Retail &amp; packaging</h3><ul>
+      <li>Retail and omnichannel brand consistency</li><li>Packaging design</li><li>Store graphics and wayfinding</li><li>Campaign art direction</li>
+    </ul></div>
+    <div class="cell"><h3>Production</h3><ul>
+      <li>Print production and pre-press</li><li>Large-format printing specifications</li><li>Materials and substrates (signage, fixtures, finishes)</li><li>Project management and timeline ownership</li><li>Cost-effective design solutions</li>
+    </ul></div>
+    <div class="cell"><h3>Tools &amp; languages</h3>
+      <div class="tools"><span>InDesign</span><span>Illustrator</span><span>Photoshop</span><span>After Effects</span><span>Premiere Pro</span><span>Figma</span></div>
+      <ul style="margin-top:18px">
+        <li>English — B2</li>
+        <li>Russian — native</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Education</h2>
+  <ul class="exp reveal">
+    <li><div class="years">2017 – 2018</div><h3>Graphic design and typography <span>Educational Projects of Alexander Vasin and Natalya Velchinskaya, T_24</span></h3><p></p></li>
+    <li><div class="years">2011 – 2015</div><h3>Video art specialist <span>The Rodchenko Moscow School of Photography and Multimedia</span></h3><p></p></li>
+    <li><div class="years">2007 – 2011</div><h3>Drawing and painting <span>Moscow State Academic Art School 1905 · studios of Andrey Korovin and Maria Krechetova</span></h3><p></p></li>
+  </ul>
+  </div>
+</section>
+
+<div class="bottom" id="contact">
+  <section class="about">
+    <div>
+      <h2><em>Let’s talk</em> — brand, retail and packaging projects, full-time or freelance.</h2>
+      <p class="where">Based in Belgrade, Serbia · working with teams across Europe</p>
+    </div>
+    <div class="contacts">
+      <a class="primary" href="mailto:elvaderi@gmail.com">elvaderi@gmail.com</a>
+      <a href="https://t.me/Norkly" target="_blank" rel="noopener">Telegram @norkly</a>
+    </div>
+  </section>
+  <footer><span>© 2026 Elizabeth Vavilova Del Rio</span><a href="index.html">All work ↑</a></footer>
+</div>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

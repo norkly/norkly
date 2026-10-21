@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elizabeth Vavilova Del Rio — Brand Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --ink: #111111; --muted: #6b6b6b; --line: #e2e2e2; --chip: #ececec; --frame: #e4e4e4; --dark: #3A3A3A;
+    --gutter: 28px; --gap: 10px; --radius: 12px;
+    --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.35; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  em { font-style: normal; font-weight: 600; }
+  .ph { background: var(--frame); color: var(--muted); font-size: 12px; display: grid; place-items: center; }
+
+  /* top bar */
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 18px var(--gutter); font-size: 14px; }
+  .bar .right { display: flex; gap: 22px; }
+  .bar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  /* hero: statement + three facts */
+  .hero { padding: 7vh var(--gutter) 40px; }
+  /* logo sits to the left of the statement, aligned to its first line */
+  .lead { display: grid; grid-template-columns: clamp(120px, 14vw, 200px) 1fr; gap: 40px; align-items: start; }
+  .logo { width: 100%; height: auto; display: block; margin-top: .35em; }
+  .hero h1 { margin: 0; max-width: 24ch; font-weight: 400; font-size: clamp(32px, 4.6vw, 72px); line-height: 1.04; letter-spacing: -.03em; }
+  .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 220px)); gap: 28px; margin-top: 56px; }
+  .fact { border-top: 1px solid var(--ink); padding-top: 12px; }
+  .fact .num { font-weight: 600; font-size: clamp(44px, 4.6vw, 72px); line-height: .9; letter-spacing: -.03em; }
+  .fact p { margin: 10px 0 0; font-size: 13px; color: var(--muted); line-height: 1.35; }
+
+  /* filters */
+  .filters { display: flex; gap: 6px; flex-wrap: wrap; padding: 0 var(--gutter) 18px; }
+  .filters button { font: inherit; font-size: 14px; border: 0; background: var(--chip); padding: 9px 15px; border-radius: 999px; cursor: pointer; color: var(--ink); }
+  .filters button:hover { background: #dedede; }
+  .filters button.on { background: var(--dark); color: #fff; }
+
+  /* grid: equal 16:9 frames — one column on mobile/tablet, two per row on desktop (>900px) */
+  .grid { display: grid; grid-template-columns: 1fr; gap: 24px 16px; padding: 0 var(--gutter); }
+  .tile { display: block; transition: opacity .3s ease, transform .5s cubic-bezier(.2,.7,.2,1); }
+  /* cover frame: 16:9, grey until an image is set; the image zooms slightly on hover */
+  .tile .frame { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); background: var(--frame); overflow: hidden; transition: background .3s ease; }
+  .tile .frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+  .tile:hover .frame img { transform: scale(1.04); }
+  .tile:hover .frame { background: #d9d9d9; }
+  .tile .ratio { position: absolute; inset: 0; display: grid; place-items: center; font-size: 12px; color: var(--muted); }
+  /* caption sits under the cover */
+  .tile .cap { display: flex; flex-direction: column; gap: 2px; margin-top: 10px; font-size: 14px; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+  .tile:hover .cap { transform: translateX(4px); }
+  .tile .cap b { font-weight: 600; }
+  .tile .cap span { color: var(--muted); }
+  .tile.hide { display: none; }
+
+  @media (min-width: 901px) {
+    .grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+    .tile .cap { flex-direction: row; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 15px; }
+  }
+
+  /* footer: photo + open to work + contacts */
+  .bottom { margin-top: 70px; background: var(--dark); color: #fff; }
+  .about { padding: 56px var(--gutter) 0; display: grid; grid-template-columns: minmax(200px, 300px) 1fr; gap: 40px; align-items: end; }
+  .about .photo { aspect-ratio: 1; border-radius: var(--radius); background: #555; color: #bdbdbd; overflow: hidden; }
+  .about .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about h2 { margin: 0; max-width: 26ch; font-weight: 400; font-size: clamp(26px, 3vw, 44px); line-height: 1.1; letter-spacing: -.025em; }
+  .about .where { margin: 14px 0 0; color: #bdbdbd; font-size: 15px; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+  .contacts a { font-size: 14px; padding: 10px 15px; border-radius: 999px; background: #4f4f4f; }
+  .contacts a:hover { background: #5c5c5c; }
+  .contacts a.primary { background: #fff; color: var(--ink); }
+  footer { padding: 48px var(--gutter) 30px; display: flex; justify-content: space-between; font-size: 13px; color: #bdbdbd; }
+
+  /* ---------- motion ---------- */
+  /* on load: header items rise one after another */
+  .rise { opacity: 0; transform: translateY(28px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  /* on scroll: tiles and the footer float in when they enter the viewport */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .rise, .reveal { opacity: 1; transform: none; animation: none; transition: none; }
+    .tile::before, .tile .cap { transition: none; }
+  }
+
+  @media (max-width: 900px) {
+    :root { --gutter: 16px; --gap: 8px; }
+    .lead { grid-template-columns: 1fr; gap: 28px; }
+    .logo { width: 96px; margin-top: 0; }
+    .facts { grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
+    .about { grid-template-columns: 1fr; gap: 24px; }
+    .about .photo { max-width: 220px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="#">Elizabeth Vavilova Del Rio</a>
+  <nav class="right">
+    <a href="#work">Work</a>
+    <a href="about.html">About</a>
+    <a href="#about">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="lead">
+    <img class="logo rise" src="assets/img/eye-01.svg" alt="Elizabeth Vavilova Del Rio — logo">
+    <h1 class="rise" style="--d:.08s">I design <em>brands people meet in real space</em> — stores, packaging, signage and campaigns.</h1>
+  </div>
+  <div class="facts">
+    <div class="fact rise" style="--d:.15s"><div class="num">10</div><p>years at IKEA Russia and Southeast Europe as Senior Graphic Designer</p></div>
+    <div class="fact rise" style="--d:.25s"><div class="num">32+</div><p>commercial campaigns for IKEA</p></div>
+    <div class="fact rise" style="--d:.35s"><div class="num">6</div><p>brand identities launched on the market</p></div>
+  </div>
+</section>
+
+<div class="filters rise" id="filters" style="--d:.5s">
+  <button class="on" data-f="all">All</button>
+  <button data-f="retail">Retail</button>
+  <button data-f="brand">Brand identity</button>
+  <button data-f="logo">Logotypes</button>
+  <button data-f="art">Art</button>
+</div>
+
+<main class="grid" id="work">
+  <!-- covers: assets/img/covers/<name>.jpg, 1600×900; a frame without <img> shows a grey placeholder -->
+  <a class="tile" data-f="retail" href="project.html?p=retail"><div class="frame"><img src="assets/img/covers/retail.jpg" alt="IKEA store"></div><div class="cap"><b>IKEA retail design</b><span>Retail design, art-direction · 2015 – 2026</span></div></a>
+  <a class="tile" data-f="brand" href="project.html?p=mamoy"><div class="frame"><img src="assets/img/covers/mamoy.jpg" alt="Mamoy Klyanus packaging"></div><div class="cap"><b>Mamoy Klyanus</b><span>Re-branding, packaging · 2018 – 2026</span></div></a>
+  <a class="tile" data-f="brand" href="project.html?p=relaxika"><div class="frame"><img src="assets/img/covers/relaxika.jpg" alt="Relaxika thermos packaging"></div><div class="cap"><b>Relaxika</b><span>Branding, packaging · 2020 – 2025</span></div></a>
+  <a class="tile" data-f="brand" href="project.html?p=polyatus"><div class="frame"><img src="assets/img/covers/polyatus.jpg" alt="Polyatus and Sinchuk identity"></div><div class="cap"><b>Polyatus and Sinchuk</b><span>Re-branding, outdoor, web · 2025</span></div></a>
+  <a class="tile" data-f="logo" href="project.html?p=sungir"><div class="frame"><img src="assets/img/covers/sungir.jpg" alt="Sungir logotype"></div><div class="cap"><b>Sungir</b><span>Logotype, tender · 2024</span></div></a>
+  <a class="tile" data-f="logo" href="project.html?p=bsma"><div class="frame"><img src="assets/img/covers/bsma.jpg" alt="BSMA logotype"></div><div class="cap"><b>BSMA</b><span>Logotype, interior, signage · 2021</span></div></a>  <a class="tile" data-f="art" href="project.html?p=comet"><div class="frame"><img src="assets/img/covers/comet.jpg?v=2" alt="Hale-Bopp book"></div><div class="cap"><b>Hale-Bopp C/1995 O1</b><span>Book design · 2018</span></div></a>
+  <a class="tile" data-f="art" href="project.html?p=memories"><div class="frame"><img src="assets/img/covers/memories.jpg" alt="Twentieth Century Collection book"></div><div class="cap"><b>Twentieth Century Collection</b><span>Book design · 2019</span></div></a></main>
+
+<div class="bottom">
+<section class="about reveal" id="about">
+  <div class="photo"><img src="assets/img/portrait.jpg" alt="Elizabeth Vavilova Del Rio"></div>
+  <div>
+    <h2><em>Open to work</em> — brand, retail and packaging projects, full-time or freelance.</h2>
+    <p class="where">Based in Belgrade, Serbia · working with teams across Europe</p>
+    <div class="contacts">
+      <a class="primary" href="mailto:elvaderi@gmail.com">elvaderi@gmail.com</a>
+      <a href="https://t.me/Norkly" target="_blank" rel="noopener">Telegram @norkly</a>
+    </div>
+  </div>
+</section>
+
+<footer><span>© 2026 Elizabeth Vavilova Del Rio</span><a href="#" onclick="scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a></footer>
+</div>
+
+<script>
+  const btns = [...document.querySelectorAll('#filters button')];
+  const tiles = [...document.querySelectorAll('.tile')];
+  btns.forEach(b => b.onclick = () => {
+    btns.forEach(x => x.classList.toggle('on', x === b));
+    const f = b.dataset.f;
+    tiles.forEach(t => t.classList.toggle('hide', f !== 'all' && t.dataset.f !== f));
+  });
+
+  // Reveal on scroll: tiles get a small stagger within the same row so they don't all pop at once
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { rootMargin: '0px 0px -10% 0px' });
+  tiles.forEach((t, i) => { t.classList.add('reveal'); t.style.setProperty('--d', (i % 3) * .08 + 's'); io.observe(t); });
+  io.observe(document.getElementById('about'));
+</script>
+</body>
+</html>
