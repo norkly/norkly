@@ -405,7 +405,10 @@ const projects = {
     meta: { Years: '2019', Scope: 'Book design, personal project' },
     cover: 'Twentieth Century Collection — book cover', coverImg: 'memories-cover.jpg',
     note: 'Made from a collection of items left over from a relationship. The texts tell stories tied to each object; printed on the inside of semi-transparent pages, they gradually disappear as the reader moves through the book — like losing connection.',
-    gallery: [ [[.87, 'Stories printed on the inside of translucent pages', 'memories-1.jpg', true], [.70, 'Folded pages', 'memories-2.jpg', true], [.88, 'An object showing through the page', 'memories-3.jpg', true]] ],
+    gallery: [
+      [[1.5, 'Folded translucent pages', 'memories-1.jpg', true], [1.5, 'A lighter and its story printed on the page', 'memories-2.jpg', true]],
+      [[1.5, 'Objects showing through the pages', 'memories-3.jpg', true], [1.5, 'A stone showing through the page', 'memories-4.jpg', true]],
+    ],
   },
   dva: {
     cat: 'Art projects', title: 'DVA: production design for an experimental 16mm film shown at IFFR and beyond',
@@ -426,7 +429,7 @@ const order = ['retail', 'mamoy', 'relaxika', 'polyatus', 'sungir', 'bsma', 'com
 
 /* ---------- render ---------- */
 /* bump ASSET_V whenever image files are replaced under the same name, so browsers drop the cached copy */
-const ASSET_V = '13';
+const ASSET_V = '14';
 const id = new URLSearchParams(location.search).get('p');
 const p = projects[id] || projects[order[0]];
 const key = projects[id] ? id : order[0];
