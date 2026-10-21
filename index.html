@@ -29,7 +29,10 @@
   /* logo sits to the left of the statement, aligned to its first line */
   .lead { display: grid; grid-template-columns: clamp(120px, 14vw, 200px) 1fr; gap: 40px; align-items: start; }
   .logo { width: 100%; height: auto; display: block; margin-top: .35em; }
-  .hero h1 { margin: 0; max-width: 24ch; font-weight: 400; font-size: clamp(32px, 4.6vw, 72px); line-height: 1.04; letter-spacing: -.03em; }
+  /* desktop: the statement ends where the facts row ends (right edge of the line above the third fact) */
+  .hero { --logo-col: clamp(120px, 14vw, 200px); --lead-gap: 40px; --facts-w: calc(3 * 220px + 2 * 28px); }
+  .lead { grid-template-columns: var(--logo-col) 1fr; gap: var(--lead-gap); }
+  .hero h1 { margin: 0; max-width: min(24ch, calc(var(--facts-w) - var(--logo-col) - var(--lead-gap))); font-weight: 400; font-size: clamp(32px, 4.6vw, 44px); line-height: 1.04; letter-spacing: -.03em; }
   .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 220px)); gap: 28px; margin-top: 56px; }
   .fact { border-top: 1px solid var(--ink); padding-top: 12px; }
   .fact .num { font-weight: 600; font-size: clamp(44px, 4.6vw, 72px); line-height: .9; letter-spacing: -.03em; }
@@ -90,6 +93,7 @@
   @media (max-width: 900px) {
     :root { --gutter: 16px; --gap: 8px; }
     .lead { grid-template-columns: 1fr; gap: 28px; }
+    .hero h1 { max-width: 24ch; }
     .logo { width: 96px; margin-top: 0; }
     .facts { grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
     .about { grid-template-columns: 1fr; gap: 24px; }
