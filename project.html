@@ -331,6 +331,22 @@ const projects = {
       [[1.33, 'Catalog spreads', 'polyatus-catalog.jpg']],
     ],
   },
+  hotdog: {
+    cat: 'Logotypes', title: 'Hot Dog Water: a playful logotype for a gastronomic sailing club',
+    sub: 'A dog balancing on a wave — or on a sausage — for a club that mixes trips at sea with a chef on board.',
+    meta: { Year: '2026', Scope: 'Logotype, merchandise' },
+    cover: 'Hot Dog Water logotype', coverImg: 'hotdog-cover.jpg',
+    case: [
+      ['Task', 'Create a logotype for a small sailing club that mixes trips at sea with a chef on board: friendly, a little ironic, and easy to put on anything from a flag to a towel.'],
+      ['Insight', 'Sailing brands tend to look serious and nautical blue. This club is about food, a cozy atmosphere and making friends, so the identity had to feel fun and simple.'],
+      ['Solution', 'The main image came from the name: a dog balancing on a wave — or on a sausage. It is supported by a hand-drawn wordmark, a wave pattern and a warm pink, red and blue palette.'],
+      ['Result', 'The club launched with a full merchandise line and social media, and quickly became recognizable, standing out among its competitors.'],
+    ],
+    gallery: [
+      [[1.5, 'Club flag', 'hotdog-flag.jpg', true], [1.5, 'T-shirt with the wordmark', 'hotdog-tshirt.jpg', true]],
+      [[1.5, 'Towels drying in the marina', 'hotdog-towels-line.jpg', true], [1.5, 'A stack of towels in three colorways', 'hotdog-towels-stack.jpg', true]],
+    ],
+  },
   sungir: {
     cat: 'Logotypes', title: 'Sungir: a logotype for an archaeological park, drawn from its most famous artifact',
     sub: 'A tender submission built around the Sungir Horse.',
@@ -428,11 +444,11 @@ const projects = {
 };
 /* projects shown on the homepage, in homepage order; drives prev / next.
    omnichannel and dolflowers stay reachable by URL but are not in the loop */
-const order = ['retail', 'mamoy', 'relaxika', 'polyatus', 'sungir', 'bsma', 'comet', 'memories'];
+const order = ['retail', 'mamoy', 'relaxika', 'polyatus', 'hotdog', 'sungir', 'bsma', 'comet', 'memories'];
 
 /* ---------- render ---------- */
 /* bump ASSET_V whenever image files are replaced under the same name, so browsers drop the cached copy */
-const ASSET_V = '15';
+const ASSET_V = '17';
 const id = new URLSearchParams(location.search).get('p');
 const p = projects[id] || projects[order[0]];
 const key = projects[id] ? id : order[0];
