@@ -405,6 +405,18 @@ const projects = {
     ],
     gallery: [ [[1.4, 'Flops over peonies'], [1.5, 'Paper bag and card'], [1.88, 'Menu cards']] ],
   },
+  tales: {
+    cat: 'Books', title: 'Tales and Other Things: a book of artworks by Katya Rozhkova',
+    sub: 'A bilingual catalogue of the artist’s site-specific projects in abandoned estates: painting, graphics, objects and photography.',
+    meta: { Year: '2026', Scope: 'Book design, layout' },
+    cover: 'Tales and Other Things — book cover', coverImg: 'tales-cover.jpg', coverMobile: 'covers/tales.jpg', card: 'covers/tales-home.jpg',
+    note: 'Katya Rozhkova brings paintings, drawings and objects into historic houses and lets the place become part of the work. The book covers four of her major series and a chapter of other works.<br><br>The layout moves the way one walks through these houses: full-bleed photographs of the rooms alternate with artworks set small on white pages, from a wide view to a detail. Keeping plenty of white space was essential: it gives every page room to breathe and keeps the artworks at the center of the reader’s attention. Each chapter opens with a close-up of its building — a worn floorboard, peeling plaster, faded wallpaper. Texts run in parallel in Russian and English, closing with the artist’s biography and an interview.',
+    list: ['Introduction', 'White School', 'A Game of Turliki', 'Nabokov Lab.', 'Garden', 'About the artist', 'Interview'],
+    gallery: [
+      [[1.5, 'Spread with a painted choir and a photograph of a boy singing in front of it', 'tales-choir.jpg', true], [1.5, 'Spread with portraits', 'tales-portraits.jpg', true]],
+      [[1.5, 'Spread with photographs of the artist at work in her studio', 'tales-studio.jpg', true], [1.5, 'Black-and-white spread with paintings in empty interiors', 'tales-interiors.jpg', true]],
+    ],
+  },
   comet: {
     cat: 'Books', title: 'Hale-Bopp C/1995 O1: a book in two parallel parts, mirroring a comet with two tails',
     sub: 'Research, images, texts and layout — created from scratch for Typomania Festival, Moscow.',
@@ -444,11 +456,11 @@ const projects = {
 };
 /* projects shown on the homepage, in homepage order; drives prev / next.
    omnichannel and dolflowers stay reachable by URL but are not in the loop */
-const order = ['retail', 'mamoy', 'relaxika', 'polyatus', 'hotdog', 'sungir', 'bsma', 'comet', 'memories'];
+const order = ['retail', 'mamoy', 'relaxika', 'polyatus', 'hotdog', 'sungir', 'bsma', 'tales', 'comet', 'memories'];
 
 /* ---------- render ---------- */
 /* bump ASSET_V whenever image files are replaced under the same name, so browsers drop the cached copy */
-const ASSET_V = '17';
+const ASSET_V = '18';
 const id = new URLSearchParams(location.search).get('p');
 const p = projects[id] || projects[order[0]];
 const key = projects[id] ? id : order[0];
@@ -503,7 +515,7 @@ document.getElementById('blocks').innerHTML = blocks.join('');
 const i = order.indexOf(key);
 const prev = order[(i - 1 + order.length) % order.length], next = order[(i + 1) % order.length];
 document.getElementById('nextprev').innerHTML = [[prev, '← Previous'], [next, 'Next →']].map(([k, lab]) =>
-  `<a class="np reveal" href="project.html?p=${k}"><div class="frame ph"><img loading="lazy" src="assets/img/covers/${k}.jpg" alt="${projects[k].title.split(':')[0]}"></div><div class="lab"><b>${projects[k].title.split(':')[0]}</b><span>${lab}</span></div></a>`).join('');
+  `<a class="np reveal" href="project.html?p=${k}"><div class="frame ph"><img loading="lazy" src="assets/img/${projects[k].card || 'covers/' + k + '.jpg'}" alt="${projects[k].title.split(':')[0]}"></div><div class="lab"><b>${projects[k].title.split(':')[0]}</b><span>${lab}</span></div></a>`).join('');
 
 /* reveal on scroll */
 const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -10% 0px' });
