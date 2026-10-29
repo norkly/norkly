@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/">
+<meta name="description" content="A bilingual catalogue of the artist’s site-specific projects in abandoned estates: painting, graphics, objects and photography.">
+<link rel="canonical" href="https://norklydesign.com/tales/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Elizabeth Vavilova Del Rio">
+<meta property="og:title" content="Tales and Other Things: a book of artworks by Katya Rozhkova">
+<meta property="og:description" content="A bilingual catalogue of the artist’s site-specific projects in abandoned estates: painting, graphics, objects and photography.">
+<meta property="og:url" content="https://norklydesign.com/tales/">
+<meta property="og:image" content="https://norklydesign.com/assets/img/share/tales.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Tales and Other Things · Elizabeth Vavilova Del Rio</title>
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --ink: #111111; --muted: #6b6b6b; --line: #e2e2e2; --chip: #ececec; --frame: #e4e4e4; --dark: #3A3A3A;
+    --gutter: 28px; --gap: 12px; --radius: 12px;
+    --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.35; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  em { font-style: normal; font-weight: 600; }
+  .ph { background: var(--frame); color: var(--muted); font-size: 12px; display: grid; place-items: center; border-radius: var(--radius); }
+  .ph.dark { background: #555; color: #bdbdbd; }
+
+  /* top bar: back link instead of the page nav */
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 18px var(--gutter); font-size: 14px; }
+  .bar .right { display: flex; gap: 22px; }
+  .bar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  /* hero: category, title, subtitle, meta column */
+  .hero { padding: 5vh var(--gutter) 36px; display: grid; grid-template-columns: 1fr minmax(180px, 260px); gap: 40px; align-items: end; }
+  .kicker { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .hero h1 { margin: 0; max-width: 20ch; font-weight: 600; font-size: clamp(32px, 4.6vw, 72px); line-height: 1.02; letter-spacing: -.03em; }
+  .hero .sub { margin: 18px 0 0; max-width: 46ch; font-size: clamp(17px, 1.4vw, 21px); line-height: 1.35; color: #2b2b2b; }
+  .meta { font-size: 13px; line-height: 1.5; color: var(--muted); }
+  .meta b { display: block; color: var(--ink); font-weight: 600; margin-top: 10px; }
+  .meta b:first-child { margin-top: 0; }
+  .meta a { text-decoration: underline; text-underline-offset: 3px; color: var(--ink); }
+
+  .wrap { padding: 0 var(--gutter); }
+  .cover { aspect-ratio: 21 / 9; }
+
+  /* stats (IKEA) */
+  .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--gap); margin-top: 48px; }
+  .stat { border-top: 1px solid var(--ink); padding-top: 12px; min-height: 150px; }
+  .stat .num { font-weight: 600; font-size: clamp(40px, 4vw, 64px); line-height: .9; letter-spacing: -.03em; }
+  .stat h4 { margin: 12px 0 4px; font-weight: 600; font-size: 14px; }
+  .stat p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+  /* case columns */
+  /* case: 2 × 2 cells (Task / Insight on the first row, Solution / Result on the second) */
+  .case { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 48px; margin-top: 56px; max-width: 1100px; font-size: clamp(15px, 1.15vw, 17px); line-height: 1.5; }
+  .case > div { border-top: 1px solid var(--line); padding-top: 16px; }
+  .case h3 { margin: 0 0 10px; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .case p { margin: 0; color: #2b2b2b; max-width: 52ch; }
+  .note { max-width: 60ch; font-size: clamp(17px, 1.3vw, 20px); line-height: 1.4; margin: 48px 0 0; color: #2b2b2b; }
+
+  /* image rows: each frame flexes by its aspect ratio (--r) */
+  .row { display: flex; gap: var(--gap); margin-top: var(--gap); }
+  .row figure { margin: 0; flex: var(--r) 1 0; aspect-ratio: var(--r); min-width: 0; position: relative; overflow: hidden; }
+  .row figcaption { position: absolute; left: 14px; bottom: 12px; right: 14px; font-size: 12px; color: var(--muted); }
+  /* frames with a real image: the image fills the frame, the caption turns white */
+  .row figure img, .row figure video, .cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* pin the image to the frame so width/height 100% always resolve to the frame's own size */
+  .row figure img, .row figure video { position: absolute; inset: 0; }
+  .cover picture { display: block; width: 100%; height: 100%; }
+  .row figure.has-img figcaption { color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+  .row figure.contain img { object-fit: contain; padding: 12%; }
+  .row figure.contain figcaption { color: var(--muted); text-shadow: none; }
+  .cover { overflow: hidden; }
+  .gallery { margin-top: 48px; }
+
+  /* desktop: two equal columns; the frame follows the photo's orientation —
+     landscape photos get a 3:2 frame, portrait photos 2:3 — so a pair of the same orientation lines up exactly */
+  @media (min-width: 901px) {
+    .gallery, .sec .rows { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); align-items: start; }
+    .row { display: contents; }
+    .row figure.landscape { aspect-ratio: 3 / 2; }
+    .row figure.portrait { aspect-ratio: 2 / 3; }
+    /* wide: the frame spans both columns and keeps the image's own proportion */
+    .row figure.wide { grid-column: 1 / -1; aspect-ratio: var(--r); }
+    /* image + text: the image takes the left column in its own proportion, the text sits beside it, centred */
+    .pair { display: contents; }
+    .pair figure { aspect-ratio: var(--r); }
+    .pair figure img { object-fit: contain; }
+    .pair-text { align-self: center; max-width: 52ch; padding: 0 8px; }
+    .pair-text p { margin: 0; font-size: clamp(16px, 1.2vw, 18px); line-height: 1.5; color: #2b2b2b; }
+    /* a stack of frames in one column stretches to the height of the frame beside it */
+    .stack { display: flex; flex-direction: column; gap: var(--gap); align-self: stretch; }
+    .stack figure { flex: 1 1 0; aspect-ratio: auto; min-height: 0; }
+    /* every photo is scaled up to fill its frame, centred; edges beyond the frame are cropped.
+       Frames with the contain option (logos) still show the whole image. */
+    .row figure img, .row figure video { object-fit: cover; object-position: center center; }
+    .row figure.contain img { object-fit: contain; }
+  }
+
+  /* chapters: a heading with a year, a short text, then that chapter's photo rows */
+  .sec { margin-top: 72px; }
+  .sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; border-top: 1px solid var(--ink); padding-top: 16px; }
+  .sec-head h2 { margin: 0; font-weight: 600; font-size: clamp(22px, 2.2vw, 32px); line-height: 1.1; letter-spacing: -.02em; }
+  .sec-head .year { flex: none; font-size: 14px; color: var(--muted); }
+  .sec > p { max-width: 62ch; margin: 16px 0 0; font-size: clamp(16px, 1.2vw, 18px); line-height: 1.5; color: #2b2b2b; }
+  .sec .rows { margin-top: 28px; }
+  .sec .row:first-child { margin-top: 0; }
+
+  /* list (festivals, chapters) */
+  .list { columns: 2; column-gap: 28px; font-size: 14px; line-height: 1.6; margin: 48px 0 0; padding: 0; list-style: none; max-width: 70ch; }
+  .list li { break-inside: avoid; }
+  .list .award { font-weight: 600; }
+
+  /* rights notice at the end of a project */
+  .disclaimer { max-width: 80ch; margin: 56px 0 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
+
+  /* prev / next */
+  .more { margin-top: 80px; border-top: 1px solid var(--ink); padding-top: 16px; font-weight: 400; font-size: clamp(16px, 1.2vw, 18px); line-height: 1.5; letter-spacing: 0; color: #2b2b2b; }
+  .nextprev { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); margin-top: 28px; }
+  .np { display: block; }
+  .np .frame { aspect-ratio: 16 / 9; overflow: hidden; }
+  .np .frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+  .np:hover .frame img { transform: scale(1.04); }
+  .np .lab { display: flex; justify-content: space-between; margin-top: 10px; font-size: 14px; }
+  .np .lab span { color: var(--muted); }
+  .np:hover .frame { background: #d9d9d9; }
+
+  /* dark footer */
+  .bottom { margin-top: 70px; background: var(--dark); color: #fff; }
+  .about { padding: 56px var(--gutter) 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+  .about h2 { margin: 0; max-width: 26ch; font-weight: 400; font-size: clamp(24px, 2.6vw, 38px); line-height: 1.1; letter-spacing: -.025em; }
+  .about .where { margin: 12px 0 0; color: #bdbdbd; font-size: 15px; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .contacts a { font-size: 14px; padding: 10px 15px; border-radius: 999px; background: #4f4f4f; }
+  .contacts a.primary { background: #fff; color: var(--ink); }
+  footer { padding: 48px var(--gutter) 30px; display: flex; justify-content: space-between; font-size: 13px; color: #bdbdbd; }
+
+  .rise { opacity: 0; transform: translateY(28px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rise, .reveal { opacity: 1; transform: none; animation: none; transition: none; } }
+
+  @media (max-width: 900px) {
+    :root { --gutter: 16px; --gap: 8px; }
+    .hero { grid-template-columns: 1fr; gap: 24px; }
+    .cover { aspect-ratio: 16 / 9; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .case { grid-template-columns: 1fr; gap: 24px; }
+    .row { flex-wrap: wrap; }
+    .row figure { flex: 1 1 100%; }
+    .stack { flex: 1 1 100%; display: flex; flex-direction: column; gap: var(--gap); }
+    .pair { flex: 1 1 100%; }
+    .pair figure { aspect-ratio: var(--r); }
+    .pair figure img { object-fit: contain; }
+    .pair-text p { margin: 16px 0 8px; font-size: 16px; line-height: 1.5; color: #2b2b2b; }
+    .list { columns: 1; }
+    .nextprev { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="index.html">← All work</a>
+  <nav class="right">
+    <a href="about.html">About</a>
+    <a href="index.html#about">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="kicker rise" id="kicker">Books</div>
+    <h1 class="rise" id="title" style="--d:.08s">Tales and Other Things: a book of artworks by Katya Rozhkova</h1>
+    <p class="sub rise" id="sub" style="--d:.16s">A bilingual catalogue of the artist’s site-specific projects in abandoned estates: painting, graphics, objects and photography.</p>
+  </div>
+  <div class="meta rise" id="meta" style="--d:.24s"></div>
+</section>
+
+<main class="wrap">
+  <div class="ph cover rise" id="cover" style="--d:.32s"></div>
+  <div id="blocks"><p class="note">Katya Rozhkova brings paintings, drawings and objects into historic houses and lets the place become part of the work. The book covers four of her major series and a chapter of other works.<br><br>The layout moves the way one walks through these houses: full-bleed photographs of the rooms alternate with artworks set small on white pages, from a wide view to a detail. Keeping plenty of white space was essential: it gives every page room to breathe and keeps the artworks at the center of the reader’s attention. Each chapter opens with a close-up of its building — a worn floorboard, peeling plaster, faded wallpaper. Texts run in parallel in Russian and English, closing with the artist’s biography and an interview.</p></div>
+  <h2 class="more reveal">See other cases</h2>
+  <nav class="nextprev" id="nextprev" aria-label="Other projects"></nav>
+</main>
+
+<div class="bottom">
+  <section class="about">
+    <div>
+      <h2><em>Open to work</em> — brand, retail and packaging projects, full-time or freelance.</h2>
+      <p class="where">Based in Belgrade, Serbia</p>
+    </div>
+    <div class="contacts">
+      <a class="primary" href="mailto:elvaderi@gmail.com">elvaderi@gmail.com</a>
+      <a href="https://t.me/Norkly" target="_blank" rel="noopener">Telegram @norkly</a>
+    </div>
+  </section>
+  <footer><span>© 2026 Elizabeth Vavilova Del Rio</span><a href="index.html">All work ↑</a></footer>
+</div>
+
+<script>
+/* ------------------------------------------------------------------
+   Content for every project. Each entry can use any of these blocks,
+   in the order listed:  stats · case · note · gallery · list
+   Gallery rows are lists of frames; r = width/height of the future image.
+------------------------------------------------------------------- */
+const projects = {
+  retail: {
+    cat: 'Retail design', title: 'IKEA: retail graphic solutions for new stores, department rebuilds and commercial campaigns',
+    sub: 'Ten years as Senior Graphic and Communication Designer — IKEA Russia and IKEA Southeast Europe.',
+    meta: { Years: '2015 – 2026', Role: 'Senior Graphic & Communication Designer, Art-direction', Scope: 'New stores, department rebuilds, commercial campaigns, learning programs' },
+    cover: 'IKEA store', coverImg: 'ikea-store-cover.jpg', captions: true,
+    disclaimer: 'All rights to the IKEA brand and materials belong to Inter IKEA Systems B.V.<br>Shown solely to demonstrate professional experience.',
+    stats: [
+      ['2', 'New IKEA stores', 'Graphic solutions for 2 newly built stores, coordinating teams of 3–5 specialists from concept to implementation.'],
+      ['15', 'Department rebuilds', 'Managed planning and build phases for 15 department reconstructions.'],
+      ['32', 'Commercial campaigns', 'Art direction and artwork creation for 360° campaigns in Russia, Serbia, Croatia, Slovenia and Romania.'],
+      ['11', 'Learning programs', 'Created and delivered training sessions on IKEA Brand Identity and Graphic Design for retail, marketing and sales specialists.'],
+      ['12', 'People growth', 'Specialists mentored from Aspirant to In-the-role level in under six months.'],
+    ],
+    sections: [
+      {
+        title: 'Swedish food delivery', year: '2020',
+        text: 'During the COVID-19 restrictions, my stakeholders from the Service Office Food department were looking for ways to expand their business and started a project with an external delivery company, Sbermarket. I prepared a communication package and a location strategy for the Russian market to promote the new option: ordering food delivery from the Swedish Food Market and the Swedish Restaurant.',
+        gallery: [
+          [[1.5, 'Communication package: rack label, table talker, poster and motion animation', 'food-delivery.jpg', true]],
+        ],
+      },
+      {
+        title: 'Cooking and Eating project', year: '2025',
+        text: 'In 2025 I led the Cooking and Eating project for four countries in Southeast Europe. The goal was to raise sales of products for cooking and eating. Building on the global retail solution, I developed a communication strategy that was successfully implemented in 10 IKEA customer meeting points.',
+        gallery: [
+          [[1.78, 'Kitchen department in a new store', 'baneasa_1.jpg'], [1.78, 'Kitchen planning area', 'kitchen-planning.jpg']],
+          [[[2.16, 'In-store communication', 'shared_image_-_2025-09-17t095722_704.jpg'], [1.78, 'Swedish food market', 'swedish-food-market.jpg']], [.72, 'Communication wall', 'baneasa_3.jpg']],
+        ],
+      },
+      {
+        title: 'Swedish bistro menu', year: '2025',
+        text: 'I noticed that the menu screens in the Swedish bistro had grown inconsistent and proposed an update. I then created a visual system that was used to refresh the menu screens in IKEA stores across four countries in Southeast Europe.',
+        gallery: [
+          [[1.8, 'Swedish bistro: before', 'bistro-before.jpg'], [1.8, 'Swedish bistro: after', 'bistro-after.jpg']],
+        ],
+      },
+      {
+        title: 'Bedroom department', year: '2018',
+        text: 'As lead designer I ran the department rebuild from planning to implementation. I created a new solution for the mattress studios and bedroom furniture that answered customers’ most frequent questions and was aligned with sales goals, with new communication assets built on a detailed product analysis. During implementation I led a small team of graphic communicators. The rebuild became a reference for other stores in Russia and showed strong follow-up results.',
+        gallery: [
+          [[1.5, 'Bedroom department rebuild', 'img_4607.jpg'], [1.5, 'Mattress communication wall', 'img_4597.jpg']],
+          [[1.5, 'Mattress display with numbered cells', 'img_4604.jpg'], [1.5, 'Mattress price tags and product information', 'mattress-tags.jpg']],
+        ],
+      },
+      {
+        title: 'Integrated lighting display', year: '2016',
+        text: 'The brief was to highlight the benefits of integrated lighting with an easy-to-understand communication solution, so I integrated the communication into the display itself for a seamless presentation. Follow-up showed fewer questions from customers and made mechanical sales easier.',
+        gallery: [
+          [[1.52, 'Interactive lighting display', 'lighting_display.jpg'], [1.5, 'Light switch detail', 'lighting_display_3.jpg']],
+        ],
+      },
+    ],
+  },
+  omnichannel: {
+    cat: 'Retail design · IKEA SEE', title: 'Omnichannel: end-to-end 360° campaigns for stores in Serbia, Romania, Croatia and Slovenia',
+    sub: 'Leading the execution of seasonal campaigns across in-store, digital and web, briefing agencies and keeping every touchpoint consistent.',
+    meta: { Years: '2022 – 2026', Role: 'Campaign lead, retail communication', Channels: 'In-store, digital screens, website, CG content' },
+    cover: 'Hero: in-store campaign installation',
+    case: [
+      ['Retail communication', 'Designing end-to-end graphic communication solutions and strategies, providing guidelines and implementation instructions, and leading follow-ups to keep improving future campaigns.'],
+      ['Adaptation', 'Every physical touchpoint has its own principles for working with graphic assets. I provide end-to-end solutions with strategies and details for implementation.'],
+      ['Digital', 'Briefing marketing agencies and CG specialists to create digital content for online and in-store use.'],
+      ['Website', 'Collaborating with online specialists to ensure consistent campaign visuals across all channels and banner creation.'],
+    ],
+    note: 'In my daily work I lead the end-to-end execution of 360° marketing campaigns, briefing agencies and ensuring visual consistency across all touchpoints — with project teams of 3–6 people delivering omnichannel solutions for in-store, online and marketing use.',
+    gallery: [
+      [[.53, 'Digital screen'], [.53, 'Digital screen'], [.53, 'Digital screen'], [.75, 'In-store installation']],
+      [[2.16, 'In-store communication'], [1.78, 'CG content']],
+    ],
+  },
+  relaxika: {
+    cat: 'Brand identity', title: 'Relaxika: a bold thermal-products brand for an active young generation',
+    sub: 'Identity, colour system and packaging for five thermos series, cooler bags and accessories.',
+    meta: { Years: '2020 – 2025', Scope: 'Branding, packaging', Links: '<a href="https://relaxika.ru/" target="_blank" rel="noopener">Website ↗</a> · <a href="https://www.wildberries.ru/brands/relaxika" target="_blank" rel="noopener">Marketplace ↗</a>' },
+    cover: 'Relaxika thermos packaging', coverImg: 'relaxika-cover.jpg', coverPos: 'left center',
+    case: [
+      ['Task', 'Launch a new thermal products brand targeting an active young generation — standing out from competitors while communicating active lifestyle as a source of balance and wellbeing.'],
+      ['Insight', 'Audience: adults 20–35 into hiking and adventure. Competitors all rely on muted palettes and nature imagery. Bold, vibrant colours stand out on shelf and make products easy to spot outdoors.'],
+      ['Solution', 'An identity rooted in harmony and balance, with a colour system referencing thermal regulation — from cold preservation to heat retention — supported by simple geometric patterns.'],
+      ['Result', '5 thermos series launched, plus cooler bags, thermal elements and accessories. Thermos sales exceeded first-year targets and stayed on track since.'],
+    ],
+    note: 'The logotype conveys the balance between temperatures — the core colours are embedded in the mark itself. Four patterns built on those colours run across the packaging range, from thermoses to cooler bags.',
+    noteAfter: true,
+    galleryAfter: [ [[1.44, 'Cold and heat pack with the zigzag pattern', 'relaxika-cold-pack.jpg', true], [1.5, 'Cooler bag hang tag, front and back', 'relaxika-tag.jpg', true]] ],
+    gallery: [
+      [[1.53, 'Thermos series 101 and 102: zigzag and circles', 'relaxika-1-1.jpg', true], [1.6, 'Thermos series 201 and 301: squares and stripes', 'relaxika-1-2.jpg', true]],
+      [[1.94, 'Thermal mugs: packaging colours mirror the mugs', 'relaxika-2.jpg', true], [1.43, 'Expansion into camping: lightweight knives', 'relaxika-3.jpg', true]],
+    ],
+  },
+  mamoy: {
+    cat: 'Brand identity', title: 'Mamoy Klyanus: an adaptive re-brand for a growing food delivery business',
+    sub: 'Rebranding built around an adaptable logo system, with ongoing support for a running business: digital and print materials for packaging, delivery, social media and locations.',
+    meta: { Years: '2018 – 2026', Scope: 'Re-branding, packaging, digital and print materials', Links: '<a href="https://mamoy-klyanus.ru/" target="_blank" rel="noopener">Website ↗</a>' },
+    cover: 'Mamoy Klyanus packaging', coverImg: 'mamoy-cover.jpg', coverMobile: 'covers/mamoy.jpg',
+    case: [
+      ['Task', 'The old identity was holding the brand back: outdated, hard to scale and struggling against modern food brands. It needed a system that could grow with the business.'],
+      ['Insight', 'The insight was a gap between product and perception. The team used premium ingredients at accessible prices — but the visuals didn’t reflect that, pushing away the audience most likely to connect with the brand. The task wasn’t to make things look better — it was to close that gap.'],
+      ['Solution', 'A logo redesigned around adaptability: icons in the mark flex by format — from a small sticker to a storefront sign — and carry into the core pattern. Colours and type retained for continuity.'],
+      ['Result', 'Customers shared and tagged the new packaging on social media. New delivery locations opened, a franchise was sold, and the brand launched its own app.'],
+    ],
+    gallery: [
+      [[1.72, 'Previous and current logotype', 'mamoy-logo-before-after.jpg', { nocap: true, wide: true, bg: '#fff' }]],
+      [[1.78, 'Brand carriers: bag, posters, menu, leaflets and box', 'mamoy-carriers.jpg', { nocap: true, wide: true }]],
+      [{ img: 'mamoy-logo-system.jpg', r: .85, cap: 'Adaptable logo system: four icons that swap inside the mark', bg: '#fff',
+         text: 'I redesigned the logo with adaptability as the core principle. The icons used in the logo are also carried through into the brand’s core pattern, creating a cohesive visual system. Depending on the application, the icon within the logo can be swapped out while maintaining instant brand recognition across all touchpoints.' }],
+      [[1.5, 'Delivery boxes and the courier bag', 'mamoy-boxes-bag-land.jpg', true], [1.5, 'Khachapuri in a box on a stack of delivery boxes', 'mamoy-khachapuri-stack-land.jpg', true]],
+      [{ img: 'mamoy-tray.jpg', r: 1.5, cap: 'Khinkali tray with the brand pattern',
+         text: 'As the brand expands into frozen food production, I continue working directly with the client, extending the visual system to retail packaging. The project is ongoing.' }],
+    ],
+  },
+  polyatus: {
+    cat: 'Brand identity', title: 'Polyatus and Sinchuk: a warm, personal identity for a construction company building family homes',
+    sub: 'Illustrative style, tone of voice and a full set of carriers from billboards to the website.',
+    meta: { Year: '2025', Scope: 'Re-branding, outdoor, web' },
+    cover: 'Polyatus and Sinchuk outdoor billboard', coverImg: 'polyatus-cover.jpg',
+    case: [
+      ['Task', 'Rebrand a construction company with a personal, hands-on approach — to stand out and connect with people seeking a calmer lifestyle outside the city.'],
+      ['Insight', 'Competitors used generic imagery of houses and materials. The audience, 35–60, wasn’t looking for construction — they were looking for a place to belong.'],
+      ['Solution', 'Built on simplicity and belonging: a clean, human-centered illustrative style and a warm tone of voice. Bright green anchors the brand in nature while keeping it fresh.'],
+      ['Result', 'Launched with all delivered materials. The share of new clients grew by 40% compared to the previous brand.'],
+    ],
+    gallery: [
+      [[1.32, 'Website on laptop and mobile', 'polyatus-web.jpg'], [1.5, 'Bus stop banner', 'polyatus-bus-stop.jpg']],
+      [[1.78, 'Construction site banner', 'polyatus-site-banner.jpg'], [1.5, 'Presentation', 'polyatus-presentation.jpg']],
+      [[1.33, 'Catalog spreads', 'polyatus-catalog.jpg']],
+    ],
+  },
+  hotdog: {
+    cat: 'Logotypes', title: 'Hot Dog Water: a playful logotype for a gastronomic sailing club',
+    sub: 'A dog balancing on a wave — or on a sausage — for a club that mixes trips at sea with a chef on board.',
+    meta: { Year: '2026', Scope: 'Logotype, merchandise', Links: '<a href="https://www.instagram.com/sailinghotdogwater/" target="_blank" rel="noopener">Instagram ↗</a>' },
+    cover: 'Hot Dog Water logotype', coverImg: 'hotdog-cover.jpg',
+    case: [
+      ['Task', 'Create a logotype for a small sailing club that mixes trips at sea with a chef on board: friendly, a little ironic, and easy to put on anything from a flag to a towel.'],
+      ['Insight', 'Sailing brands tend to look serious and nautical blue. This club is about food, a cozy atmosphere and making friends, so the identity had to feel fun and simple.'],
+      ['Solution', 'The main image came from the name: a dog balancing on a wave — or on a sausage. It is supported by a hand-drawn wordmark, a wave pattern and a warm pink, red and blue palette.'],
+      ['Result', 'The club launched with a full merchandise line and social media, and quickly became recognizable, standing out among its competitors.'],
+    ],
+    gallery: [
+      [[1.5, 'Club flag', 'hotdog-flag.jpg', true], [1.5, 'T-shirt with the wordmark', 'hotdog-tshirt.jpg', true]],
+      [[1.5, 'Towels drying in the marina', 'hotdog-towels-line.jpg', true], [1.5, 'A stack of towels in three colorways', 'hotdog-towels-stack.jpg', true]],
+    ],
+  },
+  sungir: {
+    cat: 'Logotypes', title: 'Sungir: a logotype for an archaeological park, drawn from its most famous artifact',
+    sub: 'A tender submission built around the Sungir Horse.',
+    meta: { Year: '2024', Scope: 'Logotype, tender' },
+    cover: 'Sungir logotype', coverImg: 'sungir-cover.jpg',
+    case: [
+      ['Task', 'Design a recognizable and attractive logotype for an archaeological park as part of a tender submission.'],
+      ['Insight', 'Research into the park’s history pointed to what draws visitors to this remote place — the Sungir Horse, an artifact celebrated by archaeologists and enthusiasts.'],
+      ['Solution', 'A symbol based on the Sungir Horse — historically rooted yet visually timeless, simple enough to reproduce consistently across materials and formats.'],
+      ['Result', 'The client approved the logotype — a concept-driven identity delivered under tight deadlines and tender conditions.'],
+    ],
+    gallery: [
+      [[2.2, 'Stationery: folders, business cards, letterhead and notebook', 'sungir-stationery.jpg', { nocap: true, wide: true }]],
+      [[1.5, 'Souvenir set: T-shirt, bags and business cards', 'sungir-souvenir.jpg', true], [1.5, 'Tote bag', 'sungir-tote.jpg', true]],
+    ],
+  },
+  bsma: {
+    cat: 'Logotypes', title: 'BSMA: Body, Soul, Mind, Alchemy — a mindful identity for a private fitness studio',
+    sub: 'A mark built on the structure of a gold molecule, carried into the studio interior and signage.',
+    meta: { Year: '2021', Scope: 'Logotype, interior, signage' },
+    cover: 'BSMA business card', coverImg: 'bsma-cover.jpg',
+    case: [
+      ['Task', 'A logotype capturing the values of a personal fitness and wellness studio — its educational philosophy and the deeper meaning behind its training.'],
+      ['Insight', 'Alchemy, the link between soul and body, and a mindful approach to training. Plus the format: fully private, one-on-one sessions — nothing like a conventional gym.'],
+      ['Solution', 'The mark follows the structure of a gold molecule — a direct reference to alchemy — with an upward arrow for growth. The full version carries the four values: Body, Mind, Soul, Alchemy.'],
+      ['Result', 'The studio launched successfully, found a loyal audience among busy professionals, and later expanded into eco-friendly dietary supplements.'],
+    ],
+    gallery: [
+      [[1.5, 'Studio interior with the logotype on the wall', 'bsma-interior.jpg', true], [1.5, 'Engraved wooden box and embroidered textile', 'bsma-box.jpg', true]],
+      [[1.5, 'Flyers', 'bsma-flyers.jpg', true], [1.5, 'Entrance signage and window graphics', 'bsma-facade.jpg', true]],
+    ],
+  },
+  dolflowers: {
+    cat: 'Logotypes', title: 'Dolflowers: a personal mascot for an established flower studio',
+    sub: 'A beaver with a flower — chosen for its phonetic resemblance to the owner’s surname.',
+    meta: { Years: '2021', Scope: 'Logotype, mascot' },
+    cover: 'Hero: bouquet in branded wrapping',
+    case: [
+      ['Task', 'A logotype for a flower studio in a small city, incorporating the owner’s surname to make it personal and distinctive.'],
+      ['Insight', 'Most competitors rely on predictable floral symbols. The mark had to be instantly recognizable without falling back on conventional imagery.'],
+      ['Solution', 'A mascot — a beaver, chosen for its phonetic resemblance to the owner’s surname — with a small flower embedded in its design.'],
+      ['Result', 'A distinctive, memorable logotype, warmly received and actively used across the studio’s space and social media.'],
+    ],
+    gallery: [ [[1.9, 'Wrapping'], [1, 'Mascot']] ],
+  },
+  logotypes: {
+    cat: 'Logotypes', title: 'Logofolio: compact marks for travel, sport, music and flower delivery',
+    sub: 'Four small marks, each built on one clear idea.',
+    meta: { Years: '2019 – 2024', Scope: 'Logotypes' },
+    cover: 'Hero: four marks on dark',
+    case: [
+      ['Travel shop', 'Balance and dynamics — qualities that resonate with the active lifestyle of a travel enthusiast.'],
+      ['Personal trainer', 'The client’s first letter combined with the number 1 — the ambition of being first. Minimal and easily scalable.'],
+      ['Musical festival', 'Sound waves and Lissajous curves; the central dot is the listener anchoring the composition.'],
+      ['Flower delivery app', 'A bloom and a globe merged into one geometric symbol — clean and recognizable on digital touchpoints.'],
+    ],
+    gallery: [ [[1.4, 'Flops over peonies'], [1.5, 'Paper bag and card'], [1.88, 'Menu cards']] ],
+  },
+  tales: {
+    cat: 'Books', title: 'Tales and Other Things: a book of artworks by Katya Rozhkova',
+    sub: 'A bilingual catalogue of the artist’s site-specific projects in abandoned estates: painting, graphics, objects and photography.',
+    meta: { Year: '2026', Scope: 'Book design, layout' },
+    cover: 'Tales and Other Things — book cover', coverImg: 'tales-cover.jpg', coverMobile: 'covers/tales.jpg', card: 'covers/tales-home.jpg',
+    note: 'Katya Rozhkova brings paintings, drawings and objects into historic houses and lets the place become part of the work. The book covers four of her major series and a chapter of other works.<br><br>The layout moves the way one walks through these houses: full-bleed photographs of the rooms alternate with artworks set small on white pages, from a wide view to a detail. Keeping plenty of white space was essential: it gives every page room to breathe and keeps the artworks at the center of the reader’s attention. Each chapter opens with a close-up of its building — a worn floorboard, peeling plaster, faded wallpaper. Texts run in parallel in Russian and English, closing with the artist’s biography and an interview.',
+    list: ['Introduction', 'White School', 'A Game of Turliki', 'Nabokov Lab.', 'Garden', 'About the artist', 'Interview'],
+    gallery: [
+      [[1.5, 'Spread with a painted choir and a photograph of a boy singing in front of it', 'tales-choir.jpg', true], [1.5, 'Spread with portraits', 'tales-portraits.jpg', true]],
+      [[1.5, 'Spread with photographs of the artist at work in her studio', 'tales-studio.jpg', true], [1.5, 'Black-and-white spread with paintings in empty interiors', 'tales-interiors.jpg', true]],
+    ],
+  },
+  comet: {
+    cat: 'Books', title: 'Hale-Bopp C/1995 O1: a book in two parallel parts, mirroring a comet with two tails',
+    sub: 'Research, images, texts and layout — created from scratch for Typomania Festival, Moscow.',
+    meta: { Years: '2018', Scope: 'Book design', Shown: 'Typomania Festival, Moscow', Links: '<a href="https://drive.google.com/file/d/1bc2r0FXaH4ksEfMlPn0BRjvtBx5grup2/view?usp=sharing" target="_blank" rel="noopener">See the book ↗</a>' },
+    cover: 'Hale-Bopp C/1995 O1 — book cover', coverImg: 'comet-cover.jpg', frameBg: '#cecece',
+    note: 'Hale-Bopp has two tails and was discovered simultaneously by two scientists working independently, so the book runs in two parallel parts, with a fold-out poster of the comet at the center.',
+    list: ['Comets in Art History', 'Glossary of comet components', 'Biographies of discoverers', 'Visual chronology', 'A comet arrives + poster'],
+    gallery: [
+      [[1.5, 'Black cover with die-cut holes', 'comet-book.jpg', true], [1.5, 'Spread', 'comet-1.jpg', true]],
+      [[1.5, 'Spread', 'comet-2.jpg', true], [1.5, 'Spread', 'comet-3.jpg', true]],
+      [[1.5, 'Spread', 'comet-4.jpg', true], [1.5, 'Fold-out comet poster', 'comet-5.jpg', true]],
+    ],
+  },
+  memories: {
+    cat: 'Books', title: 'Twentieth Century Collection: a book about fading memories, whose stories disappear page by page',
+    sub: 'Objects left over from a relationship, printed on translucent pages.',
+    meta: { Years: '2019', Scope: 'Book design, personal project' },
+    cover: 'Twentieth Century Collection — book cover', coverImg: 'memories-cover.jpg',
+    note: 'Made from a collection of items left over from a relationship. The texts tell stories tied to each object; printed on the inside of semi-transparent pages, they gradually disappear as the reader moves through the book — like losing connection.',
+    gallery: [
+      [[1.5, 'Folded translucent pages', 'memories-1.jpg', true], [1.5, 'A lighter and its story printed on the page', 'memories-2.jpg', true]],
+      [[1.5, 'A stone showing through the page', 'memories-4.jpg', true], [1.5, 'Objects showing through the pages', 'memories-3.jpg', true]],
+    ],
+  },
+  dva: {
+    cat: 'Art projects', title: 'DVA: production design for an experimental 16mm film shown at IFFR and beyond',
+    sub: 'Props, art pieces and sets for a 33-minute poetic reflection on Russian reality.',
+    meta: { Years: '2023', Role: 'Production designer', Links: '<a href="https://www.imdb.com/title/tt21097382/" target="_blank" rel="noopener">IMDb ↗</a> · <a href="https://akarelina.com/DVA" target="_blank" rel="noopener">Movie page ↗</a>' },
+    cover: 'Hero: film still',
+    case: [
+      ['About the film', 'Experimental fiction, 16mm, 33 min. A poetic reflection on Russian reality — a mix of absurd political decisions and prohibitions, escapism and violence — describing the invisible boundary between the premonition of disaster and living in it.'],
+      ['My role', 'As Production Designer I developed the aesthetic and setups with the Director: props, art pieces, staging the main character’s room interior and several outdoor scenes.'],
+    ],
+    list: ['International Film Festival Rotterdam 2023', 'Chiayi International Art Doc Film Festival 2023', 'Brive Film Festival 2023', 'Pesaro Film Festival 2023', 'Voices Festival Vologda 2023', 'Rencontres Internationales Paris/Berlin 2023', 'Lausanne Underground Film & Music Festival 2023 — <span class="award">Best Short Fiction</span>', 'Image Forum Festival Tokyo 2023', 'Festifreak, La Plata 2023', 'Moinho Cine Fest 2024', 'Hallucinea Film Festival 2024 — <span class="award">Best Science Fiction Short</span>'],
+    gallery: [ [[.71, 'Poster'], [1.5, 'Film still']] ],
+  },
+};
+/* projects shown on the homepage, in homepage order; drives prev / next.
+   omnichannel and dolflowers stay reachable by URL but are not in the loop */
+const order = ['retail', 'mamoy', 'relaxika', 'polyatus', 'hotdog', 'sungir', 'bsma', 'tales', 'comet', 'memories'];
+
+/* ---------- render ---------- */
+/* bump ASSET_V whenever image files are replaced under the same name, so browsers drop the cached copy */
+const ASSET_V = '18';
+const id = 'tales';
+const p = projects[id] || projects[order[0]];
+const key = projects[id] ? id : order[0];
+document.title = p.title.split(':')[0] + ' · Elizabeth Vavilova Del Rio';
+/* frameBg: colour of the photo frames on this project's page (default is the site-wide light grey) */
+if (p.frameBg) document.documentElement.style.setProperty('--frame', p.frameBg);
+
+document.getElementById('kicker').textContent = p.cat;
+document.getElementById('title').textContent = p.title;
+document.getElementById('sub').textContent = p.sub || '';
+document.getElementById('meta').innerHTML = Object.entries(p.meta).map(([k, v]) => `<b>${k}</b>${v}`).join('');
+const coverEl = document.getElementById('cover');
+/* coverPos: which part of the cover to keep when a narrow screen crops it, e.g. 'left center' */
+/* coverMobile: a different cover file for phones and tablets (the cover frame is 16:9 there) */
+if (p.coverImg) coverEl.innerHTML = `<picture>${p.coverMobile ? `<source media="(max-width: 900px)" srcset="assets/img/${p.coverMobile}?v=${ASSET_V}">` : ''}<img src="assets/img/${p.coverImg}?v=${ASSET_V}" alt="${p.cover}"${p.coverPos ? ` style="object-position:${p.coverPos}"` : ''}></picture>`;
+else coverEl.textContent = p.cover + ' · 21 × 9';
+
+const blocks = [];
+if (p.stats) blocks.push(`<div class="stats reveal">${p.stats.map(([n, h, t]) => `<div class="stat"><div class="num">${n}</div><div><h4>${h}</h4><p>${t}</p></div></div>`).join('')}</div>`);
+if (p.case) blocks.push(`<div class="case reveal">${p.case.map(([h, t]) => `<div><h3>${h}</h3><p>${t}</p></div>`).join('')}</div>`);
+/* noteAfter: true moves the note below the gallery instead of above it */
+if (p.note && !p.noteAfter) blocks.push(`<p class="note reveal">${p.note}</p>`);
+if (p.list) blocks.push(`<ul class="list reveal">${p.list.map(li => `<li>${li}</li>`).join('')}</ul>`);
+/* a frame is [ratio, caption, image?, options?]; the caption always serves as alt text.
+   options: true = hide the caption, or { nocap, contain (show the whole image, e.g. a logo), wide (span both columns on desktop),
+   pos (which part of the image to keep when the frame crops it, e.g. 'center 38%'), bg (frame colour) } */
+const frame = ([r, cap, img, o]) => {
+  const opt = o === true ? { nocap: true } : Object.assign({}, o || {});
+  /* captions are shown only on projects with captions: true; the caption still serves as alt text */
+  if (!p.captions) opt.nocap = true;
+  const orient = r >= 1 ? 'landscape' : 'portrait';
+  /* an .mp4 / .webm file becomes a silent looping video from assets/video */
+  if (img && /\.(mp4|webm)$/i.test(img)) return `<figure class="ph has-img ${orient}" style="--r:${r}"><video autoplay muted loop playsinline preload="metadata" src="assets/video/${img}" aria-label="${cap}"></video>${opt.nocap ? '' : `<figcaption>${cap}</figcaption>`}</figure>`;
+  return img
+    ? `<figure class="ph has-img ${orient}${opt.contain ? ' contain' : ''}${opt.wide ? ' wide' : ''}" style="--r:${r}${opt.bg ? ';background:' + opt.bg : ''}"><img loading="lazy" src="assets/img/${img}?v=${ASSET_V}" alt="${cap}"${opt.pos ? ` style="object-position:${opt.pos}"` : ''}>${opt.nocap ? '' : `<figcaption>${cap}</figcaption>`}</figure>`
+    : `<figure class="ph ${orient}" style="--r:${r}"><span>${r} : 1</span><figcaption>${cap}</figcaption></figure>`;
+};
+/* a row item is a frame, an array of frames = a stack in one column, or { text, img, r, cap, bg } = image + text side by side */
+const pair = ({ text, img, r, cap, bg }) =>
+  `<div class="pair"><figure class="ph has-img" style="--r:${r}${bg ? ';background:' + bg : ''}"><img loading="lazy" src="assets/img/${img}?v=${ASSET_V}" alt="${cap || ''}"></figure><div class="pair-text"><p>${text}</p></div></div>`;
+const rows = gallery => gallery.map(row => `<div class="row reveal">${row.map(item =>
+  Array.isArray(item) ? (Array.isArray(item[0]) ? `<div class="stack">${item.map(frame).join('')}</div>` : frame(item)) : pair(item)).join('')}</div>`).join('');
+if (p.gallery) blocks.push(`<div class="gallery">${rows(p.gallery)}</div>`);
+if (p.note && p.noteAfter) blocks.push(`<p class="note reveal">${p.note}</p>`);
+/* galleryAfter: extra rows shown after the note */
+if (p.galleryAfter) blocks.push(`<div class="gallery">${rows(p.galleryAfter)}</div>`);
+if (p.sections) blocks.push(p.sections.map(s => `<section class="sec"><div class="sec-head reveal"><h2>${s.title}</h2><span class="year">${s.year}</span></div><p class="reveal">${s.text}</p><div class="rows">${rows(s.gallery)}</div></section>`).join(''));
+if (p.disclaimer) blocks.push(`<p class="disclaimer reveal">${p.disclaimer}</p>`);
+document.getElementById('blocks').innerHTML = blocks.join('');
+
+/* prev / next */
+const i = order.indexOf(key);
+const prev = order[(i - 1 + order.length) % order.length], next = order[(i + 1) % order.length];
+document.getElementById('nextprev').innerHTML = [[prev, '← Previous'], [next, 'Next →']].map(([k, lab]) =>
+  `<a class="np reveal" href="${k}/"><div class="frame ph"><img loading="lazy" src="assets/img/${projects[k].card || 'covers/' + k + '.jpg'}" alt="${projects[k].title.split(':')[0]}"></div><div class="lab"><b>${projects[k].title.split(':')[0]}</b><span>${lab}</span></div></a>`).join('');
+
+/* reveal on scroll */
+const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -10% 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
