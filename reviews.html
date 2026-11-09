@@ -41,20 +41,23 @@
   .head h1 { margin: 0; max-width: 22ch; font-weight: 400; font-size: clamp(32px, 4.6vw, 48px); line-height: 1.04; letter-spacing: -.03em; }
   .head p { margin: 16px 0 0; max-width: 52ch; color: var(--muted); }
 
-  /* one review per row: quote, then who wrote it, then a link to the case */
-  .reviews { padding: 0 var(--gutter); }
-  .review { padding: 40px 0; border-top: 1px solid var(--line); }
-  .review:last-child { border-bottom: 1px solid var(--line); }
-  .review blockquote { margin: 0; max-width: 46ch; font-size: clamp(19px, 1.7vw, 26px); line-height: 1.35; letter-spacing: -.01em; }
+  /* reviews as cards, two per row on desktop: who wrote it on top, then the quote, the case link at the bottom */
+  .reviews { padding: 0 var(--gutter); display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); align-items: stretch; }
+  .review { background: #f4f4f4; border-radius: var(--radius); padding: 32px; }
+  .review > div { display: flex; flex-direction: column; align-items: flex-start; height: 100%; }
+  /* same height for one- and two-line captions, so photos and quotes start on one line across a row */
+  .review .who { margin-bottom: 22px; min-height: 57px; }
+  .review .tag { margin-top: auto; }
+  .review blockquote { margin: 0 0 24px; font-size: clamp(16px, 1.2vw, 18px); line-height: 1.5; }
   .review blockquote p { margin: 0; }
   .review blockquote p + p { margin-top: .7em; }
-  .who { display: flex; align-items: center; gap: 12px; margin-top: 24px; font-size: 14px; }
-  .who img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex: none; background: var(--frame); }
+  .who { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+  .who img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: none; background: var(--frame); }
   .who b { display: block; font-weight: 600; }
   .who span { color: var(--muted); }
-  .tag { display: inline-block; font-size: 13px; padding: 7px 12px; border-radius: 999px; background: var(--chip); margin-top: 18px; }
+  .tag { display: inline-block; font-size: 13px; padding: 7px 12px; border-radius: 999px; background: var(--chip); }
   .tag:hover { background: #dedede; }
-  .back { display: inline-block; margin-top: 40px; font-size: 15px; padding: 11px 18px; border-radius: 999px; background: var(--dark); color: #fff; }
+  .back { grid-column: 1 / -1; justify-self: start; display: inline-block; margin-top: 28px; font-size: 15px; padding: 11px 18px; border-radius: 999px; background: var(--dark); color: #fff; }
   .back:hover { background: #000; }
 
   /* dark footer */
@@ -77,7 +80,8 @@
     :root { --gutter: 16px; }
     /* phone: four menu items do not fit next to the name; Work is hidden, the name already leads to the work */
     .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; } .bar .right a[href$="#work"] { display: none; }
-    .review { padding: 28px 0; }
+    .reviews { grid-template-columns: 1fr; }
+    .review { padding: 24px; }
   }
 </style>
 </head>
@@ -101,43 +105,43 @@
 <section class="reviews">
   <article class="review reveal">
     <div>
+      <div class="who"><img src="assets/img/reviews/oleg-nanava.jpg" alt="Oleg Nanava"><div><b>Oleg Nanava</b><span>Founder, Mamoy Klyanus</span></div></div>
       <blockquote>
         <p>“Design isn’t just about ‘make it look nice’. It’s about soul, structure and results you can see with the naked eye. Working with you is a pure pleasure.</p>
         <p>The way you built the visual world of Mamoy Klyanus from scratch, turning a single delivery point into a strong, living brand, is magic. Special respect for the adaptive logo: brilliant.</p>
         <p>And let me add: the project hasn’t just opened three new locations. Our own production for retail is already being built and a franchise launch is on the way. So your work is working for future growth.”</p>
       </blockquote>
-      <div class="who"><img src="assets/img/reviews/oleg-nanava.jpg" alt="Oleg Nanava"><div><b>Oleg Nanava</b><span>Founder, Mamoy Klyanus</span></div></div>
       <a class="tag" href="mamoy/">Case: Mamoy Klyanus →</a>
     </div>
   </article>
   <article class="review reveal">
     <div>
+      <div class="who"><img src="assets/img/reviews/daria-osadchaia.jpg" alt="Daria Osadchaia"><div><b>Daria Osadchaia</b><span>Communication and Interior Design Manager, IKEA Russia Service Office · managed Liza directly</span></div></div>
       <blockquote>
         <p>“During our time working together, Lisa proved to be a reliable, proactive, and resilient professional. She is a true team player — sociable, flexible, and always focused on customer needs. Lisa has strong leadership qualities and critical thinking skills, which enable her to drive projects independently while engaging stakeholders effectively.</p>
         <p>She is quick to integrate into any team, actively seeks and gives feedback, and brings structure, creativity, and storytelling logic to everything she does. These qualities help her develop thoughtful, user-centered solutions. Her work consistently received positive feedback from colleagues and stakeholders alike.</p>
         <p>Lisa is punctual, detail-oriented, and a fast learner. Her ability to combine strategic thinking with a hands-on approach makes her a highly valuable teammate.”</p>
       </blockquote>
-      <div class="who"><img src="assets/img/reviews/daria-osadchaia.jpg" alt="Daria Osadchaia"><div><b>Daria Osadchaia</b><span>Communication and Interior Design Manager, IKEA Russia Service Office · managed Liza directly</span></div></div>
       <a class="tag" href="retail/">Case: IKEA →</a>
     </div>
   </article>
   <article class="review reveal">
     <div>
+      <div class="who"><img src="assets/img/reviews/viktoria-bitaeva.jpg" alt="Viktoria Bitaeva"><div><b>Viktoria Bitaeva</b><span>Brand Identity Manager, IKEA Southeast Europe Service Office · managed Liza directly</span></div></div>
       <blockquote>
         <p>“Lisa is a great person and true graphic designer at her core. You can always count on most creative and yet systemic approach to graphic design solutions, that she provides. Lisa always keeps in mind how to secure end-to-end execution to any creative concept on highest quality level.</p>
         <p>Also being a trainer for IKEA visual language and tone of voice Lisa got the feedback as a mentor that enabled creative and insightful experiences for her trainees. Additionally to creative power, Lisa is very organized, engaged and dedicated to high level team performance.</p>
         <p>I would highly recommend hiring Lisa if you think of young-minded, ambitious, scalable design solutions and projects.”</p>
       </blockquote>
-      <div class="who"><img src="assets/img/reviews/viktoria-bitaeva.jpg" alt="Viktoria Bitaeva"><div><b>Viktoria Bitaeva</b><span>Brand Identity Manager, IKEA Southeast Europe Service Office · managed Liza directly</span></div></div>
       <a class="tag" href="retail/">Case: IKEA →</a>
     </div>
   </article>
   <article class="review reveal">
     <div>
+      <div class="who"><img src="assets/img/reviews/igor-bodrov.jpg" alt="Igor Bodrov"><div><b>Igor Bodrov</b><span>Client, one-copy birthday book</span></div></div>
       <blockquote>
         <p>“Liza and I made a one-of-a-kind book, a keepsake birthday gift. Liza did everything precisely, communication was clear, and she gave a lot of advice on preparing the materials and on how books work. I highly recommend her as a book designer, and in general.”</p>
       </blockquote>
-      <div class="who"><img src="assets/img/reviews/igor-bodrov.jpg" alt="Igor Bodrov"><div><b>Igor Bodrov</b><span>Client, one-copy birthday book</span></div></div>
     </div>
   </article>
   <a class="back" href="index.html">← Back to main</a>
