@@ -154,6 +154,8 @@
 
   @media (max-width: 900px) {
     :root { --gutter: 16px; --gap: 8px; }
+    /* phone: four menu items do not fit next to the name; Work is hidden, the name already leads to the work */
+    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; } .bar .right a[href$="#work"] { display: none; }
     .hero { grid-template-columns: 1fr; gap: 24px; }
     .cover { aspect-ratio: 16 / 9; }
     .stats { grid-template-columns: repeat(2, 1fr); }
@@ -176,6 +178,7 @@
   <a href="index.html">← All work</a>
   <nav class="right">
     <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
     <a href="index.html#about">Contact</a>
   </nav>
 </header>

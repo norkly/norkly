@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reviews · Elizabeth Vavilova Del Rio</title>
+<meta name="description" content="What clients and colleagues say about working with Elizabeth Vavilova Del Rio, brand designer.">
+<link rel="canonical" href="https://norklydesign.com/reviews.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elizabeth Vavilova Del Rio">
+<meta property="og:title" content="Reviews · Elizabeth Vavilova Del Rio">
+<meta property="og:description" content="What clients and colleagues say about working with me.">
+<meta property="og:url" content="https://norklydesign.com/reviews.html">
+<meta property="og:image" content="https://norklydesign.com/assets/img/share/home.jpg?v=2d42cbbe">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --ink: #111111; --muted: #6b6b6b; --line: #e2e2e2; --chip: #ececec; --frame: #e4e4e4; --dark: #3A3A3A;
+    --gutter: 28px; --gap: 12px; --radius: 12px;
+    --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.35; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  em { font-style: normal; font-weight: 600; }
+
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 18px var(--gutter); font-size: 14px; }
+  .bar .right { display: flex; gap: 22px; }
+  .bar a:hover, .bar a.on { text-decoration: underline; text-underline-offset: 3px; }
+
+  .head { padding: 7vh var(--gutter) 40px; }
+  .head h1 { margin: 0; max-width: 22ch; font-weight: 400; font-size: clamp(32px, 4.6vw, 48px); line-height: 1.04; letter-spacing: -.03em; }
+  .head p { margin: 16px 0 0; max-width: 52ch; color: var(--muted); }
+
+  /* one review per row: quote, then who wrote it, then a link to the case */
+  .reviews { padding: 0 var(--gutter); }
+  .review { padding: 40px 0; border-top: 1px solid var(--line); }
+  .review:last-child { border-bottom: 1px solid var(--line); }
+  .review blockquote { margin: 0; max-width: 46ch; font-size: clamp(19px, 1.7vw, 26px); line-height: 1.35; letter-spacing: -.01em; }
+  .review blockquote p { margin: 0; }
+  .review blockquote p + p { margin-top: .7em; }
+  .who { display: flex; align-items: center; gap: 12px; margin-top: 24px; font-size: 14px; }
+  .who img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex: none; background: var(--frame); }
+  .who b { display: block; font-weight: 600; }
+  .who span { color: var(--muted); }
+  .tag { display: inline-block; font-size: 13px; padding: 7px 12px; border-radius: 999px; background: var(--chip); margin-top: 18px; }
+  .tag:hover { background: #dedede; }
+
+  /* dark footer */
+  .bottom { margin-top: 80px; background: var(--dark); color: #fff; }
+  .about { padding: 56px var(--gutter) 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+  .about h2 { margin: 0; max-width: 26ch; font-weight: 400; font-size: clamp(24px, 2.6vw, 38px); line-height: 1.1; letter-spacing: -.025em; }
+  .about .where { margin: 12px 0 0; color: #bdbdbd; font-size: 15px; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .contacts a { font-size: 14px; padding: 10px 15px; border-radius: 999px; background: #4f4f4f; }
+  .contacts a.primary { background: #fff; color: var(--ink); }
+  footer { padding: 48px var(--gutter) 30px; display: flex; justify-content: space-between; font-size: 13px; color: #bdbdbd; }
+
+  .rise { opacity: 0; transform: translateY(28px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rise, .reveal { opacity: 1; transform: none; animation: none; transition: none; } }
+
+  @media (max-width: 900px) {
+    :root { --gutter: 16px; }
+    /* phone: four menu items do not fit next to the name; Work is hidden, the name already leads to the work */
+    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; } .bar .right a[href$="#work"] { display: none; }
+    .review { padding: 28px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="index.html">Elizabeth Vavilova Del Rio</a>
+  <nav class="right">
+    <a href="index.html#work">Work</a>
+    <a href="about.html">About</a>
+    <a class="on" href="reviews.html">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="head">
+  <h1 class="rise">What clients and colleagues <em>say about working with me</em></h1>
+  <p class="rise" style="--d:.08s">Founders, managers and colleagues I have worked with.</p>
+</section>
+
+<section class="reviews">
+  <article class="review reveal">
+    <div>
+      <blockquote>
+        <p>“Design isn’t just about ‘make it look nice’. It’s about soul, structure and results you can see with the naked eye. Working with you is a pure pleasure.</p>
+        <p>The way you built the visual world of Mamoy Klyanus from scratch, turning a single delivery point into a strong, living brand, is magic. Special respect for the adaptive logo: brilliant.</p>
+        <p>And let me add: the project hasn’t just opened three new locations. Our own production for retail is already being built and a franchise launch is on the way. So your work is working for future growth.”</p>
+      </blockquote>
+      <div class="who"><img src="assets/img/reviews/oleg-nanava.jpg" alt="Oleg Nanava"><div><b>Oleg Nanava</b><span>Founder, Mamoy Klyanus</span></div></div>
+      <a class="tag" href="mamoy/">Case: Mamoy Klyanus →</a>
+    </div>
+  </article>
+  <article class="review reveal">
+    <div>
+      <blockquote>
+        <p>“During our time working together, Lisa proved to be a reliable, proactive, and resilient professional. She is a true team player — sociable, flexible, and always focused on customer needs. Lisa has strong leadership qualities and critical thinking skills, which enable her to drive projects independently while engaging stakeholders effectively.</p>
+        <p>She is quick to integrate into any team, actively seeks and gives feedback, and brings structure, creativity, and storytelling logic to everything she does. These qualities help her develop thoughtful, user-centered solutions. Her work consistently received positive feedback from colleagues and stakeholders alike.</p>
+        <p>Lisa is punctual, detail-oriented, and a fast learner. Her ability to combine strategic thinking with a hands-on approach makes her a highly valuable teammate.”</p>
+      </blockquote>
+      <div class="who"><img src="assets/img/reviews/daria-osadchaia.jpg" alt="Daria Osadchaia"><div><b>Daria Osadchaia</b><span>Communication and Interior Design Manager, IKEA Russia Service Office · managed Liza directly</span></div></div>
+      <a class="tag" href="retail/">Case: IKEA →</a>
+    </div>
+  </article>
+  <article class="review reveal">
+    <div>
+      <blockquote>
+        <p>“Lisa is a great person and true graphic designer at her core. You can always count on most creative and yet systemic approach to graphic design solutions, that she provides. Lisa always keeps in mind how to secure end-to-end execution to any creative concept on highest quality level.</p>
+        <p>Also being a trainer for IKEA visual language and tone of voice Lisa got the feedback as a mentor that enabled creative and insightful experiences for her trainees. Additionally to creative power, Lisa is very organized, engaged and dedicated to high level team performance.</p>
+        <p>I would highly recommend hiring Lisa if you think of young-minded, ambitious, scalable design solutions and projects.”</p>
+      </blockquote>
+      <div class="who"><img src="assets/img/reviews/viktoria-bitaeva.jpg" alt="Viktoria Bitaeva"><div><b>Viktoria Bitaeva</b><span>Brand Identity Manager, IKEA Southeast Europe Service Office · managed Liza directly</span></div></div>
+      <a class="tag" href="retail/">Case: IKEA →</a>
+    </div>
+  </article>
+  <article class="review reveal">
+    <div>
+      <blockquote>
+        <p>“Liza and I made a one-of-a-kind book, a keepsake birthday gift. Liza did everything precisely, communication was clear, and she gave a lot of advice on preparing the materials and on how books work. I highly recommend her as a book designer, and in general.”</p>
+      </blockquote>
+      <div class="who"><img src="assets/img/reviews/igor-bodrov.jpg" alt="Igor Bodrov"><div><b>Igor Bodrov</b><span>Client, one-copy birthday book</span></div></div>
+    </div>
+  </article>
+</section>
+
+<div class="bottom" id="contact">
+  <section class="about">
+    <div>
+      <h2><em>Let’s talk</em> — brand, retail and packaging projects, full-time or freelance.</h2>
+      <p class="where">Based in Belgrade, Serbia · working with teams across Europe</p>
+    </div>
+    <div class="contacts">
+      <a class="primary" href="mailto:elvaderi@gmail.com">elvaderi@gmail.com</a>
+      <a href="https://t.me/Norkly" target="_blank" rel="noopener">Telegram @norkly</a>
+    </div>
+  </section>
+  <footer><span>© 2026 Elizabeth Vavilova Del Rio</span><a href="index.html">All work ↑</a></footer>
+</div>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

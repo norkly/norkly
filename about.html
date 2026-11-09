@@ -92,6 +92,8 @@
 
   @media (max-width: 900px) {
     :root { --gutter: 16px; }
+    /* phone: four menu items do not fit next to the name; Work is hidden, the name already leads to the work */
+    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; } .bar .right a[href$="#work"] { display: none; }
     .hero { grid-template-columns: 1fr; gap: 28px; }
     .portrait { max-width: 240px; }
     section.block { padding-top: 56px; }
@@ -107,6 +109,7 @@
   <nav class="right">
     <a href="index.html#work">Work</a>
     <a class="on" href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
