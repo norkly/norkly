@@ -136,7 +136,13 @@
 
 <section class="hero">
   <div class="lead">
-    <img class="logo rise" src="assets/img/eye-01.svg" alt="Elizabeth Vavilova Del Rio — logo">
+    <!-- the eye is inline (same drawing as assets/img/eye-01.svg) so the script below can move the pupil after the cursor;
+         the pupil is clipped by the outer contour, so it never sticks out of the eye -->
+    <svg class="logo rise" id="eye" viewBox="0 0 478.52 301.36" role="img" aria-label="Elizabeth Vavilova Del Rio — logo">
+      <defs><clipPath id="eye-shape"><path d="M239.26,301.36c-43.76,0-83.44-7.49-117.93-22.26c-27.96-11.97-52.53-28.7-73.04-49.71c-35.15-36.02-46.21-72.35-46.66-73.88L0,150l2.04-5.37c0.57-1.51,14.46-37.3,50.73-72.92c21.24-20.86,45.87-37.49,73.21-49.41C159.92,7.5,198.03,0,239.26,0c41.23,0,79.34,7.5,113.28,22.3c27.33,11.92,51.97,28.54,73.21,49.41c36.26,35.62,50.15,71.41,50.73,72.92l2.04,5.37l-1.63,5.51c-0.45,1.53-11.5,37.87-46.66,73.88c-20.51,21.01-45.08,37.73-73.04,49.71C322.7,293.87,283.02,301.36,239.26,301.36z"/></clipPath></defs>
+      <path d="M239.26,301.36c-43.76,0-83.44-7.49-117.93-22.26c-27.96-11.97-52.53-28.7-73.04-49.71c-35.15-36.02-46.21-72.35-46.66-73.88L0,150l2.04-5.37c0.57-1.51,14.46-37.3,50.73-72.92c21.24-20.86,45.87-37.49,73.21-49.41C159.92,7.5,198.03,0,239.26,0c41.23,0,79.34,7.5,113.28,22.3c27.33,11.92,51.97,28.54,73.21,49.41c36.26,35.62,50.15,71.41,50.73,72.92l2.04,5.37l-1.63,5.51c-0.45,1.53-11.5,37.87-46.66,73.88c-20.51,21.01-45.08,37.73-73.04,49.71C322.7,293.87,283.02,301.36,239.26,301.36z M36.27,151.3c4.17,10.21,15.18,33.05,37.54,55.55c39.92,40.15,95.58,60.51,165.45,60.51c69.87,0,125.54-20.36,165.45-60.51c22.36-22.5,33.38-45.34,37.54-55.55c-4.96-10.25-17.77-33.49-41.41-56.38C359.1,54.5,304.73,34,239.26,34S119.42,54.5,77.67,94.92C54.05,117.79,41.24,141.01,36.27,151.3z"/>
+      <g clip-path="url(#eye-shape)"><circle id="pupil" cx="239.26" cy="150.68" r="104.62" transform="translate(30.1 0)"/></g>
+    </svg>
     <h1 class="rise" style="--d:.08s">I design <em>brands people meet in real space</em> — stores, packaging, signage and campaigns.</h1>
   </div>
   <div class="facts">
@@ -198,6 +204,30 @@
   }), { rootMargin: '0px 0px -10% 0px' });
   tiles.forEach((t, i) => { t.classList.add('reveal'); t.style.setProperty('--d', (i % 3) * .08 + 's'); io.observe(t); });
   io.observe(document.getElementById('about'));
+
+  // The pupil follows the cursor (and glances at a tap on touch screens).
+  // It moves inside an ellipse of 50 x 14 units around the centre of the eye and eases towards its target;
+  // until the pointer moves it stays where the logo has it, looking slightly to the right.
+  (() => {
+    const eye = document.getElementById('eye'), pupil = document.getElementById('pupil');
+    if (!eye || !pupil || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const RX = 50, RY = 14, REACH = 250;          // range in drawing units; cursor distance (px) at which the pupil is at its limit
+    let x = 30.1, y = 0, tx = x, ty = y, raf = 0;
+    const step = () => {
+      x += (tx - x) * .18; y += (ty - y) * .18;
+      pupil.setAttribute('transform', `translate(${x.toFixed(2)} ${y.toFixed(2)})`);
+      raf = Math.abs(tx - x) + Math.abs(ty - y) > .05 ? requestAnimationFrame(step) : 0;
+    };
+    const look = e => {
+      const r = eye.getBoundingClientRect();
+      const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+      const d = Math.hypot(dx, dy) || 1, k = Math.min(1, d / REACH);
+      tx = dx / d * k * RX; ty = dy / d * k * RY;
+      if (!raf) raf = requestAnimationFrame(step);
+    };
+    addEventListener('pointermove', look, { passive: true });
+    addEventListener('pointerdown', look, { passive: true });
+  })();
 </script>
 </body>
 </html>
