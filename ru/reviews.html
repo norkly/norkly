@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Отзывы · Елизавета Вавилова дель Рио</title>
+<meta name="description" content="Что клиенты и коллеги говорят о работе со мной.">
+<link rel="canonical" href="https://norklydesign.com/ru/reviews.html">
+<link rel="alternate" hreflang="en" href="https://norklydesign.com/reviews.html">
+<link rel="alternate" hreflang="ru" href="https://norklydesign.com/ru/reviews.html">
+<link rel="alternate" hreflang="x-default" href="https://norklydesign.com/reviews.html">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Елизавета Вавилова дель Рио">
+<meta property="og:title" content="Отзывы · Елизавета Вавилова дель Рио">
+<meta property="og:description" content="Что клиенты и коллеги говорят о работе со мной.">
+<meta property="og:url" content="https://norklydesign.com/ru/reviews.html">
+<meta property="og:image" content="https://norklydesign.com/assets/img/share/home.jpg?v=2d42cbbe">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --ink: #111111; --muted: #6b6b6b; --line: #e2e2e2; --chip: #ececec; --frame: #e4e4e4; --dark: #3A3A3A;
+    --gutter: 28px; --gap: 12px; --radius: 12px;
+    --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.35; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  em { font-style: normal; font-weight: 600; }
+
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 18px var(--gutter); font-size: 14px; }
+  .bar .right { display: flex; gap: 22px; }
+  .bar a:hover, .bar a.on { text-decoration: underline; text-underline-offset: 3px; }
+  /* on narrow screens the eye mark replaces the name, which does not fit next to the menu (not on the homepage) */
+  .bar .mark { display: none; height: 16px; width: auto; }
+
+  .head { padding: 7vh var(--gutter) 40px; }
+  .head h1 { margin: 0; max-width: 22ch; font-weight: 400; font-size: clamp(32px, 4.6vw, 48px); line-height: 1.04; letter-spacing: -.03em; }
+  .head p { margin: 16px 0 0; max-width: 52ch; color: var(--muted); }
+
+  /* reviews as cards, two per row on desktop: who wrote it on top, then the quote, the case link at the bottom */
+  .reviews { padding: 0 var(--gutter); display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); align-items: stretch; }
+  .review { background: #f4f4f4; border-radius: var(--radius); padding: 32px; }
+  .review > div { display: flex; flex-direction: column; align-items: flex-start; height: 100%; }
+  /* same height for one- and two-line captions, so photos and quotes start on one line across a row */
+  .review .who { margin-bottom: 22px; min-height: 57px; }
+  .review .tag { margin-top: auto; }
+  .review blockquote { margin: 0 0 24px; font-size: clamp(16px, 1.2vw, 18px); line-height: 1.5; }
+  .review blockquote p { margin: 0; }
+  .review blockquote p + p { margin-top: .7em; }
+  .who { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+  .who img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: none; background: var(--frame); }
+  .who b { display: block; font-weight: 600; }
+  .who span { color: var(--muted); }
+  .tag { display: inline-block; font-size: 13px; padding: 7px 12px; border-radius: 999px; background: var(--chip); }
+  .tag:hover { background: #dedede; }
+  .back { grid-column: 1 / -1; justify-self: start; display: inline-block; margin-top: 28px; font-size: 15px; padding: 11px 18px; border-radius: 999px; background: var(--dark); color: #fff; }
+  .back:hover { background: #000; }
+
+  /* dark footer */
+  .bottom { margin-top: 80px; background: var(--dark); color: #fff; }
+  .about { padding: 56px var(--gutter) 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+  .about h2 { margin: 0; max-width: 26ch; font-weight: 400; font-size: clamp(24px, 2.6vw, 38px); line-height: 1.1; letter-spacing: -.025em; }
+  .about .where { margin: 12px 0 0; color: #bdbdbd; font-size: 15px; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .contacts a { font-size: 14px; padding: 10px 15px; border-radius: 999px; background: #4f4f4f; }
+  .contacts a.primary { background: #fff; color: var(--ink); }
+  footer { padding: 48px var(--gutter) 30px; display: flex; justify-content: space-between; font-size: 13px; color: #bdbdbd; }
+
+  .rise { opacity: 0; transform: translateY(28px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rise, .reveal { opacity: 1; transform: none; animation: none; transition: none; } }
+
+  @media (max-width: 900px) {
+    :root { --gutter: 16px; }
+    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; }
+    .bar .mark { display: block; } .bar .name { display: none; }
+    .reviews { grid-template-columns: 1fr; }
+    .review { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="index.html" aria-label="Елизавета Вавилова дель Рио"><img class="mark" src="/assets/img/eye-01.svg" alt=""><span class="name">Елизавета Вавилова дель Рио</span></a>
+  <nav class="right">
+    <a href="index.html#work">Работы</a>
+    <a href="about.html">Обо мне</a>
+    <a class="on" href="reviews.html">Отзывы</a>
+    <a href="#contact">Контакты</a>
+    <a class="lang" href="/reviews.html">EN</a>
+  </nav>
+</header>
+
+<section class="head">
+  <h1 class="rise">Что клиенты и коллеги <em>говорят о работе со мной</em></h1>
+  <p class="rise" style="--d:.08s">Основатели, руководители и коллеги, с которыми я работала.</p>
+</section>
+
+<section class="reviews">
+  <article class="review reveal">
+    <div>
+      <div class="who"><img src="/assets/img/reviews/oleg-nanava.jpg" alt="Oleg Nanava"><div><b>Олег Нанава</b><span>Основатель «Мамой Клянусь»</span></div></div>
+      <blockquote>
+        <p>«Дизайн — это не просто про „сделайте красивенько“, это про душу, системность и результат, который видно невооружённым глазом. Работать с тобой — одно удовольствие.</p>
+        <p>То, как ты выстроила визуальный мир „Мамой Клянусь“ с нуля, превратив одну точку доставки в мощный, живой бренд — это магия. Отдельный респект за адаптивный логотип: гениально.</p>
+        <p>И да, добавлю от себя: у проекта ведь не просто +3 филиала, а уже строится собственное производство под розницу и готовится запуск франшизы! То есть твоя работа работает на будущее масштабирование.»</p>
+      </blockquote>
+      <a class="tag" href="mamoy/">Кейс: Мамой Клянусь →</a>
+    </div>
+  </article>
+  <article class="review reveal">
+    <div>
+      <div class="who"><img src="/assets/img/reviews/daria-osadchaia.jpg" alt="Daria Osadchaia"><div><b>Дарья Осадчая</b><span>Менеджер по коммуникациям и дизайну интерьеров, сервисный офис IKEA в России · непосредственный руководитель Лизы</span></div></div>
+      <blockquote>
+        <p>«За время нашей совместной работы Лиза показала себя надёжным, инициативным и стойким профессионалом. Она настоящий командный игрок: общительная, гибкая и всегда думает о потребностях покупателя. У Лизы сильные лидерские качества и критическое мышление, поэтому она самостоятельно ведёт проекты и умеет вовлекать в них стейкхолдеров.</p>
+        <p>Она быстро вливается в любую команду, сама просит обратную связь и даёт её другим, а во всё, что делает, привносит структуру, творческий подход и логику сторителлинга. Благодаря этому её решения получаются продуманными и ориентированными на пользователя. Её работа неизменно получала положительные отзывы и от коллег, и от стейкхолдеров.</p>
+        <p>Лиза пунктуальна, внимательна к деталям и быстро учится. Умение сочетать стратегическое мышление с практическим подходом делает её очень ценным членом команды.»</p>
+      </blockquote>
+      <a class="tag" href="retail/">Кейс: IKEA →</a>
+    </div>
+  </article>
+  <article class="review reveal">
+    <div>
+      <div class="who"><img src="/assets/img/reviews/viktoria-bitaeva.jpg" alt="Viktoria Bitaeva"><div><b>Виктория Битаева</b><span>Менеджер по айдентике бренда, сервисный офис IKEA в Юго-Восточной Европе · непосредственный руководитель Лизы</span></div></div>
+      <blockquote>
+        <p>«Лиза — замечательный человек и настоящий графический дизайнер по своей сути. От неё всегда можно ждать самого творческого и при этом системного подхода к графическим решениям. Лиза всегда держит в голове, как довести любую креативную концепцию до воплощения от начала до конца на самом высоком уровне качества.</p>
+        <p>Как тренер по визуальному языку и тону голоса IKEA Лиза получала отзывы как наставник, который даёт своим ученикам творческий и содержательный опыт. Помимо творческой силы, Лиза очень организованна, вовлечена и нацелена на высокий результат команды.</p>
+        <p>Очень рекомендую пригласить Лизу, если вам нужны свежие, амбициозные и масштабируемые дизайн-решения и проекты.»</p>
+      </blockquote>
+      <a class="tag" href="retail/">Кейс: IKEA →</a>
+    </div>
+  </article>
+  <article class="review reveal">
+    <div>
+      <div class="who"><img src="/assets/img/reviews/igor-bodrov.jpg" alt="Igor Bodrov"><div><b>Игорь Бодров</b><span>Клиент, книга в одном экземпляре</span></div></div>
+      <blockquote>
+        <p>«Делали с Лизой книжку в одном экземпляре — памятный подарок на день рождения. Лиза всё делала чётко, прозрачная коммуникация, много подсказывала при подготовке материалов по особенностям работы с книгами. Очень рекомендую и как дизайнера книг, и вообще.»</p>
+      </blockquote>
+    </div>
+  </article>
+  <a class="back" href="index.html">← На главную</a>
+</section>
+
+<div class="bottom" id="contact">
+  <section class="about">
+    <div>
+      <h2><em>Открыта к проектам</em> в штате или на фрилансе</h2>
+      <p class="where">Живу в Белграде, Сербия · работаю с командами по всей Европе</p>
+    </div>
+    <div class="contacts">
+      <a class="primary" href="mailto:elvaderi@gmail.com">elvaderi@gmail.com</a>
+      <a href="https://t.me/Norkly" target="_blank" rel="noopener">Telegram @norkly</a>
+      <a href="https://wa.me/381641486690" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </section>
+  <footer><span>© 2026 Елизавета Вавилова дель Рио</span><a href="index.html">Все работы ↑</a></footer>
+</div>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

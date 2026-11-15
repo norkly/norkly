@@ -6,6 +6,9 @@
 <title>About · Elizabeth Vavilova Del Rio</title>
 <meta name="description" content="Brand designer with ten years at IKEA, now based in Belgrade and open to brand, retail and packaging projects.">
 <link rel="canonical" href="https://norklydesign.com/about.html">
+<link rel="alternate" hreflang="en" href="https://norklydesign.com/about.html">
+<link rel="alternate" hreflang="ru" href="https://norklydesign.com/ru/about.html">
+<link rel="alternate" hreflang="x-default" href="https://norklydesign.com/about.html">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Elizabeth Vavilova Del Rio">
 <meta property="og:title" content="About · Elizabeth Vavilova Del Rio">
@@ -37,6 +40,8 @@
   .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 18px var(--gutter); font-size: 14px; }
   .bar .right { display: flex; gap: 22px; }
   .bar a:hover, .bar a.on { text-decoration: underline; text-underline-offset: 3px; }
+  /* on narrow screens the eye mark replaces the name, which does not fit next to the menu (not on the homepage) */
+  .bar .mark { display: none; height: 16px; width: auto; }
 
   /* hero: portrait + statement */
   .hero { padding: 5vh var(--gutter) 0; display: grid; grid-template-columns: minmax(240px, 380px) 1fr; gap: 56px; align-items: start; }
@@ -92,8 +97,8 @@
 
   @media (max-width: 900px) {
     :root { --gutter: 16px; }
-    /* phone: four menu items do not fit next to the name; Work is hidden, the name already leads to the work */
-    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; } .bar .right a[href$="#work"] { display: none; }
+    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; }
+    .bar .mark { display: block; } .bar .name { display: none; }
     .hero { grid-template-columns: 1fr; gap: 28px; }
     .portrait { max-width: 240px; }
     section.block { padding-top: 56px; }
@@ -105,12 +110,13 @@
 <body>
 
 <header class="bar">
-  <a href="index.html">Elizabeth Vavilova Del Rio</a>
+  <a href="index.html" aria-label="Elizabeth Vavilova Del Rio"><img class="mark" src="assets/img/eye-01.svg" alt=""><span class="name">Elizabeth Vavilova Del Rio</span></a>
   <nav class="right">
     <a href="index.html#work">Work</a>
     <a class="on" href="about.html">About</a>
     <a href="reviews.html">Reviews</a>
     <a href="#contact">Contact</a>
+    <a class="lang" href="/ru/about.html">RU</a>
   </nav>
 </header>
 

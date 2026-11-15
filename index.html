@@ -6,6 +6,9 @@
 <title>Elizabeth Vavilova Del Rio — Brand Designer</title>
 <meta name="description" content="I design brands people meet in real space — stores, packaging, signage and campaigns. Ten years at IKEA, now based in Belgrade.">
 <link rel="canonical" href="https://norklydesign.com/">
+<link rel="alternate" hreflang="en" href="https://norklydesign.com/">
+<link rel="alternate" hreflang="ru" href="https://norklydesign.com/ru/">
+<link rel="alternate" hreflang="x-default" href="https://norklydesign.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Elizabeth Vavilova Del Rio">
 <meta property="og:title" content="Elizabeth Vavilova Del Rio — Brand Designer">
@@ -111,8 +114,10 @@
 
   @media (max-width: 900px) {
     :root { --gutter: 16px; --gap: 8px; }
-    /* phone: four menu items do not fit next to the name; Work is hidden, the name already leads to the work */
-    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; } .bar .right a[href$="#work"] { display: none; }
+    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; }
+    /* the name stays while it fits next to the menu with a 20px gap; when it does not, it wraps to a second line
+       that the fixed height cuts off, so only the menu is left (other pages show the eye mark instead) */
+    .bar { flex-direction: row-reverse; flex-wrap: wrap; gap: 40px 20px; height: 54px; overflow: hidden; } .bar .right { order: -1; }
     .lead { grid-template-columns: 1fr; gap: 28px; }
     .hero h1 { max-width: 24ch; }
     .logo { width: 96px; margin-top: 0; }
@@ -131,6 +136,7 @@
     <a href="about.html">About</a>
     <a href="reviews.html">Reviews</a>
     <a href="#about">Contact</a>
+    <a class="lang" href="/ru/">RU</a>
   </nav>
 </header>
 

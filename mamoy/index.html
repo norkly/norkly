@@ -6,6 +6,9 @@
 <base href="/">
 <meta name="description" content="Rebranding built around an adaptable logo system, with ongoing support for a running business: digital and print materials for packaging, delivery, social media and locations.">
 <link rel="canonical" href="https://norklydesign.com/mamoy/">
+<link rel="alternate" hreflang="en" href="https://norklydesign.com/mamoy/">
+<link rel="alternate" hreflang="ru" href="https://norklydesign.com/ru/mamoy/">
+<link rel="alternate" hreflang="x-default" href="https://norklydesign.com/mamoy/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Elizabeth Vavilova Del Rio">
 <meta property="og:title" content="Mamoy Klyanus: an adaptive re-brand for a growing food delivery business">
@@ -99,6 +102,9 @@
     .pair figure img { object-fit: contain; }
     .pair-text { align-self: center; max-width: 52ch; padding: 0 8px; }
     .pair-text p { margin: 0; font-size: clamp(16px, 1.2vw, 18px); line-height: 1.5; color: #2b2b2b; }
+    /* wide pair: the image spans both columns and the text goes under it */
+    .pair.wide figure, .pair.wide .pair-text { grid-column: 1 / -1; }
+    .pair.wide .pair-text { align-self: start; max-width: 64ch; padding: 12px 8px 28px; }
     /* a stack of frames in one column stretches to the height of the frame beside it */
     .stack { display: flex; flex-direction: column; gap: var(--gap); align-self: stretch; }
     .stack figure { flex: 1 1 0; aspect-ratio: auto; min-height: 0; }
@@ -180,6 +186,7 @@
     <a href="about.html">About</a>
     <a href="reviews.html">Reviews</a>
     <a href="index.html#about">Contact</a>
+    <a class="lang" href="/ru/mamoy/">RU</a>
   </nav>
 </header>
 
@@ -273,6 +280,43 @@ const projects = {
         ],
       },
     ],
+    ru: {
+      cat: 'Дизайн для ритейла', title: 'IKEA: графические решения для новых магазинов, перестройки отделов и коммерческих кампаний',
+      sub: 'Десять лет в роли старшего дизайнера графики и коммуникаций в IKEA в России и Юго-Восточной Европе.',
+      meta: { 'Годы': '2015 – 2026', 'Роль': 'Старший дизайнер графики и коммуникаций, арт-дирекшн', 'Задачи': 'Новые магазины, перестройка отделов, коммерческие кампании, обучающие программы' },
+      cover: 'Магазин IKEA',
+      disclaimer: 'Все права на бренд и материалы IKEA принадлежат Inter IKEA Systems B.V.<br>Материалы показаны только для демонстрации профессионального опыта.',
+      stats: [
+        ['2', 'Новые магазины IKEA', 'Графические решения для 2 новых магазинов: координировала команды из 3–5 специалистов от концепции до внедрения.'],
+        ['15', 'Перестройки отделов', 'Руководила этапами планирования и строительства при реконструкции 15 отделов.'],
+        ['32', 'Коммерческие кампании', 'Арт-дирекшн и создание макетов для кампаний 360° в России, Сербии, Хорватии, Словении и Румынии.'],
+        ['11', 'Обучающие программы', 'Разработала и провела тренинги по айдентике бренда IKEA и графическому дизайну для специалистов ритейла, маркетинга и продаж.'],
+        ['12', 'Коучинг и менторинг','Специалисты, которых я менторила с Junior до Middle уровня менее чем за полгода.'],
+      ],
+      sections: [
+        { title: 'Доставка еды из Ресторана IKEA', text: 'Во время ограничений из-за COVID-19 мои стейкхолдеры из отдела питания Сервис Офиса искали способы расширить бизнес и запустили проект с внешней службой доставки, «Сбермаркетом». Я подготовила пакет коммуникаций и стратегию размещения для российского рынка, чтобы рассказать о новой возможности заказа доставки из Бистро и Ресторана IKEA.' },
+        { title: 'Проект Cooking and Eating', text: 'В 2025 году я вела проект Cooking and Eating для четырёх стран Юго-Восточной Европы. Нужно было поднять продажи товаров для приготовления и подачи еды. Опираясь на глобальное решение от команды из Швеции, я разработала коммуникационную стратегию и визуальную коммуникацию, адаптированную под местные рынки. Я работала напрямую с командами магазинов, чтобы каждое решение было внедрено согласно гайдлайнам и проектной документации. Проект успешно запущен в 10 точках встречи IKEA с покупателями.' },
+        { title: 'Меню Шведского бистро', text: 'Я заметила, что экраны меню в Шведском бистро не привлекают внимания и плохо считываются издалека, и предложила стейкхолдерам их обновить. Я создала экраны и визуальную систему, по которой меню обновилось во всех магазинах IKEA в странах Юго-Восточной Европы.' },
+        { title: 'Отдел спален', text: 'Как ведущий дизайнер я провела перестройку отдела от планирования до внедрения. Я создала новое коммуникационное решение для студий матрасов и мебели для спальни: оно отвечало на самые частые вопросы покупателей и было согласовано с целями продаж. Новые коммуникационные материалы строились на подробном анализе товаров. На этапе внедрения я руководила небольшой командой графических дизайнеров. Перестройка стала образцом для других магазинов в России и показала сильные результаты.' },
+        { title: 'Экспозиция встроенной подсветки', text: 'Задача была показать преимущества встроенной подсветки с помощью простой и понятной коммуникации, поэтому я встроила коммуникацию прямо в экспозицию. По итогам у покупателей стало меньше вопросов, а товар стало проще продавать без помощи продавца.' },
+      ],
+      caps: {
+        'Communication package: rack label, table talker, poster and motion animation': 'Пакет коммуникаций: ценник на стеллаж, тейбл-тент, постер и анимация',
+        'Kitchen department in a new store': 'Отдел кухонь в новом магазине',
+        'Kitchen planning area': 'Зона планирования кухонь',
+        'In-store communication': 'Коммуникация в магазине',
+        'Swedish food market': 'Магазин шведских продуктов',
+        'Communication wall': 'Стена с коммуникацией',
+        'Swedish bistro: before': 'Шведское бистро: до',
+        'Swedish bistro: after': 'Шведское бистро: после',
+        'Bedroom department rebuild': 'Перестройка отдела спален',
+        'Mattress communication wall': 'Стена с коммуникацией о матрасах',
+        'Mattress display with numbered cells': 'Экспозиция матрасов с пронумерованными ячейками',
+        'Mattress price tags and product information': 'Ценники и информация о матрасах',
+        'Interactive lighting display': 'Интерактивная экспозиция подсветки',
+        'Light switch detail': 'Деталь: выключатель',
+      },
+    },
   },
   omnichannel: {
     cat: 'Retail design · IKEA SEE', title: 'Omnichannel: end-to-end 360° campaigns for stores in Serbia, Romania, Croatia and Slovenia',
@@ -302,13 +346,28 @@ const projects = {
       ['Solution', 'An identity rooted in harmony and balance, with a colour system referencing thermal regulation — from cold preservation to heat retention — supported by simple geometric patterns.'],
       ['Result', '5 thermos series launched, plus cooler bags, thermal elements and accessories. Thermos sales exceeded first-year targets and stayed on track since.'],
     ],
-    note: 'The logotype conveys the balance between temperatures — the core colours are embedded in the mark itself. Four patterns built on those colours run across the packaging range, from thermoses to cooler bags.',
-    noteAfter: true,
     galleryAfter: [ [[1.44, 'Cold and heat pack with the zigzag pattern', 'relaxika-cold-pack.jpg', true], [1.5, 'Cooler bag hang tag, front and back', 'relaxika-tag.jpg', true]] ],
     gallery: [
+      [{ img: 'relaxika-logo-patterns.png', r: 2, cap: 'Relaxika logotype and the four brand patterns', bg: '#fff', wide: true,
+         text: 'The logotype was designed to convey the idea of a balance of temperatures. The brand colours are built into the mark and reflect the shift from warm to cold and back — a reference to what the products do. Four patterns were developed from the same brand colours, each one visually supporting the idea of thermal regulation. They are used across different types of packaging, from thermoses to cooler bags.' }],
       [[1.53, 'Thermos series 101 and 102: zigzag and circles', 'relaxika-1-1.jpg', true], [1.6, 'Thermos series 201 and 301: squares and stripes', 'relaxika-1-2.jpg', true]],
       [[1.94, 'Thermal mug packaging in navy and cream', 'relaxika-2.jpg', true], [1.43, 'Kitchen knife packaging', 'relaxika-3.jpg', true]],
     ],
+    ru: {
+      cat: 'Айдентика', title: 'Relaxika: смелый бренд термопосуды для активного молодого поколения',
+      sub: 'Айдентика, цветовая система и упаковка для пяти серий термосов, термосумок и аксессуаров.',
+      meta: { 'Годы': '2020 – 2025', 'Задачи': 'Брендинг, упаковка', 'Ссылки': '<a href="https://relaxika.ru/" target="_blank" rel="noopener">Сайт ↗</a> · <a href="https://www.wildberries.ru/brands/relaxika" target="_blank" rel="noopener">Маркетплейс ↗</a>' },
+      cover: 'Упаковка термоса Relaxika',
+      case: [
+        ['Задача', 'Запустить новый бренд термопосуды для активного молодого поколения: выделиться среди конкурентов и показать активный образ жизни как источник баланса и хорошего самочувствия.'],
+        ['Инсайт', 'Аудитория: взрослые 20–35 лет, которые любят походы и приключения. Конкуренты используют приглушённые палитры и изображения природы. Смелые, яркие цвета выделяются на полке, и такие предметы не потеряются на природе.'],
+        ['Решение', 'Айдентика построена на идее гармонии и баланса. Цветовая система отсылает к терморегуляции, от сохранения холода до удержания тепла, и дополнена простыми геометрическими паттернами.'],
+        ['Результат', 'Запущено 5 серий термосов, а также термосумки, аккумуляторы холода и аксессуары. Продажи термосов превысили план первого года и с тех пор идут по плану.'],
+      ],
+      texts: {
+        'relaxika-logo-patterns.png': 'Логотип был разработан так, чтобы передавать идею баланса температур. В основу знака заложены фирменные цвета бренда, отражающие переход от тепла к холоду и обратно — отсылая к основной функции продуктов. На основе фирменных цветов бренда были разработаны четыре паттерна, каждый из которых визуально поддерживает идею терморегуляции. Они используются на разных типах упаковки — от термосов до сумок-холодильников.',
+      },
+    },
   },
   mamoy: {
     cat: 'Brand identity', title: 'Mamoy Klyanus: an adaptive re-brand for a growing food delivery business',
@@ -330,6 +389,22 @@ const projects = {
       [{ img: 'mamoy-tray.jpg', r: 1.5, cap: 'Khinkali tray with the brand pattern',
          text: 'As the brand expands into frozen food production, I continue working directly with the client, extending the visual system to retail packaging. The project is ongoing.' }],
     ],
+    ru: {
+      cat: 'Айдентика', title: 'Мамой Клянусь: ребрендинг для растущей службы доставки еды',
+      sub: 'Ребрендинг с адаптивной системой логотипа и постоянная поддержка действующего бизнеса: цифровые и печатные материалы, упаковка, мерч.',
+      meta: { 'Годы': '2018 – 2026', 'Задачи': 'Ребрендинг, упаковка, цифровые и печатные материалы', 'Ссылки': '<a href="https://mamoy-klyanus.ru/" target="_blank" rel="noopener">Сайт ↗</a>' },
+      cover: 'Упаковка «Мамой Клянусь»',
+      case: [
+        ['Задача', 'Старая айдентика тормозила бренд: она устарела, плохо масштабировалась и проигрывала современным брендам еды. Нужна была система, которая сможет расти вместе с бизнесом.'],
+        ['Инсайт', 'Между продуктом и его восприятием был разрыв. Команда готовила из премиальных ингредиентов по доступным ценам, но визуальный образ этого не передавал и отталкивал ту аудиторию, которой бренд был ближе всего.'],
+        ['Решение', 'Логотип создан вокруг идеи адаптивности: иконки в знаке меняются под формат, от маленькой наклейки до вывески, и переходят в основной паттерн. Цвета и шрифт сохранены ради узнаваемости.'],
+        ['Результат', 'Покупатели выкладывали новую упаковку в соцсетях и отмечали бренд. Открылись новые точки доставки, была продана франшиза, а бренд запустил собственное приложение.'],
+      ],
+      texts: {
+        'mamoy-logo-system.jpg': 'Иконки из логотипа используются в основном паттерне бренда, так что получается цельная визуальная система. В зависимости от носителя иконку в логотипе можно менять, а бренд остаётся мгновенно узнаваемым во всех точках контакта.',
+        'mamoy-tray.jpg': 'Бренд выходит в производство замороженных продуктов, и я продолжаю работать напрямую с клиентом, расширяя визуальную систему на розничную упаковку. Проект продолжается.',
+      },
+    },
   },
   polyatus: {
     cat: 'Brand identity', title: 'Polyatus and Sinchuk: a warm, personal identity for a construction company building family homes',
@@ -347,6 +422,18 @@ const projects = {
       [[1.78, 'Construction site banner', 'polyatus-site-banner.jpg'], [1.5, 'Presentation', 'polyatus-presentation.jpg']],
       [[1.33, 'Catalog spreads', 'polyatus-catalog.jpg']],
     ],
+    ru: {
+      cat: 'Айдентика', title: 'Полятус и Синчук: тёплая айдентика для строительной компании, которая строит семейные дома',
+      sub: 'Иллюстративный стиль, дружелюбный тон коммуникации и полный набор носителей, от билбордов до сайта.',
+      meta: { 'Год': '2025', 'Задачи': 'Ребрендинг, наружная реклама, сайт' },
+      cover: 'Билборд «Полятус и Синчук»',
+      case: [
+        ['Задача', 'Провести ребрендинг строительной компании с личным, вовлечённым подходом, чтобы выделиться и найти общий язык с людьми, которые ищут спокойную жизнь за городом.'],
+        ['Инсайт', 'Конкуренты использовали типовые изображения домов и материалов. Аудитория искала место, где чувствуешь себя дома.'],
+        ['Решение', 'В основе простота и чувство дома: чистый, человечный иллюстративный стиль и тёплый тон коммуникации. Яркий зелёный связывает бренд с природой и сохраняет свежесть.'],
+        ['Результат', 'Бренд запущен со всеми подготовленными материалами. Доля новых клиентов выросла на 40% по сравнению с прежним брендом.'],
+      ],
+    },
   },
   hotdog: {
     cat: 'Logotypes', title: 'Hot Dog Water: a playful logotype for a gastronomic sailing club',
@@ -363,6 +450,18 @@ const projects = {
       [[1.5, 'Club flag', 'hotdog-flag.jpg', true], [1.5, 'T-shirt with the wordmark', 'hotdog-tshirt.jpg', true]],
       [[1.5, 'Towels drying in the marina', 'hotdog-towels-line.jpg', true], [1.5, 'A stack of towels in three colorways', 'hotdog-towels-stack.jpg', true]],
     ],
+    ru: {
+      cat: 'Логотипы', title: 'Hot Dog Water: весёлый логотип для гастрономического яхт-клуба',
+      sub: 'Собака балансирует на волне, или на сосиске: знак для клуба, где выходы в море сочетаются с шеф-поваром на борту.',
+      meta: { 'Год': '2026', 'Задачи': 'Логотип, мерч', 'Ссылки': '<a href="https://www.instagram.com/sailinghotdogwater/" target="_blank" rel="noopener">Instagram ↗</a>' },
+      cover: 'Логотип Hot Dog Water',
+      case: [
+        ['Задача', 'Создать логотип для небольшого яхт-клуба, где выходы в море сочетаются с шеф-поваром на борту: дружелюбный, немного ироничный, такой, который легко нанести на что угодно, от флага до полотенца.'],
+        ['Инсайт', 'Яхтенные бренды обычно выглядят серьёзно и по-морскому сине. Этот клуб про еду, уютную атмосферу и новых друзей, поэтому айдентика должна была быть весёлой и простой.'],
+        ['Решение', 'Главный образ вырос из названия: собака балансирует на волне, или на сосиске. Его поддерживают рисованная надпись, паттерн из волн и тёплая палитра из розового, красного и синего.'],
+        ['Результат', 'Клуб запустился с полной линейкой мерча и соцсетями, быстро стал узнаваемым и выделяется среди конкурентов.'],
+      ],
+    },
   },
   sungir: {
     cat: 'Logotypes', title: 'Sungir: a logotype for an archaeological park, drawn from its most famous artifact',
@@ -379,6 +478,18 @@ const projects = {
       [[2.2, 'Stationery: folders, business cards, letterhead and notebook', 'sungir-stationery.jpg', { nocap: true, wide: true }]],
       [[1.5, 'Souvenir set: T-shirt, bags and business cards', 'sungir-souvenir.jpg', true], [1.5, 'Tote bag', 'sungir-tote.jpg', true]],
     ],
+    ru: {
+      cat: 'Логотипы', title: 'Сунгирь: логотип археологического парка',
+      sub: 'Заявка на тендер, построенная вокруг самого узнаваемого артефакта парка.',
+      meta: { 'Год': '2024', 'Задачи': 'Логотип, тендер' },
+      cover: 'Логотип «Сунгирь»',
+      case: [
+        ['Задача', 'Разработать узнаваемый и привлекательный логотип археологического парка в рамках тендерной заявки.'],
+        ['Инсайт', 'Изучение истории парка показало, что именно привлекает посетителей в это удалённое место: известные артефакты, знакомые археологам и любителям истории, в том числе сунгирская лошадка.'],
+        ['Решение', 'Символ на основе сунгирской лошадки: исторически укоренённый, но достаточно простой, чтобы одинаково воспроизводиться на разных материалах и в разных форматах.'],
+        ['Результат', 'Клиент утвердил логотип: айдентика с сильной идеей, сделанная в сжатые сроки и в условиях тендера.'],
+      ],
+    },
   },
   bsma: {
     cat: 'Logotypes', title: 'BSMA: Body, Soul, Mind, Alchemy — a mindful identity for a private fitness studio',
@@ -395,6 +506,18 @@ const projects = {
       [[1.5, 'Studio interior with the logotype on the wall', 'bsma-interior.jpg', true], [1.5, 'Engraved wooden box and embroidered textile', 'bsma-box.jpg', true]],
       [[1.5, 'Flyers', 'bsma-flyers.jpg', true], [1.5, 'Entrance signage and window graphics', 'bsma-facade.jpg', true]],
     ],
+    ru: {
+      cat: 'Логотипы', title: 'BSMA: Body, Soul, Mind, Alchemy — осознанная айдентика для частной фитнес-студии',
+      sub: 'Знак построен на структуре молекулы золота и перенесён в интерьер студии и вывески.',
+      meta: { 'Год': '2021', 'Задачи': 'Логотип, интерьер, вывески' },
+      cover: 'Визитка BSMA',
+      case: [
+        ['Задача', 'Создать логотип, который передаёт ценности студии: её образовательную философию и глубокий смысл тренировок.'],
+        ['Инсайт', 'Заказчику было важно показать связь души и тела через философию алхимии, где все элементы связаны друг с другом.'],
+        ['Решение', 'Знак повторяет структуру молекулы золота, это прямая отсылка к алхимии, а стрелка вверх означает рост. В полной версии есть четыре ценности: Body, Mind, Soul, Alchemy.'],
+        ['Результат', 'Студия успешно запустилась, мы разместили логотип на оборудовании для тренировок, в интерьере студии и во входной зоне. Студия нашла лояльную аудиторию среди занятых профессионалов, а позже начала выпускать экологичные БАДы.'],
+      ],
+    },
   },
   logotypes: {
     cat: 'Logotypes', title: 'Logofolio: compact marks for travel, sport, music and flower delivery',
@@ -420,6 +543,14 @@ const projects = {
       [[1.5, 'Spread with a painted choir and a photograph of a boy singing in front of it', 'tales-choir.jpg', true], [1.5, 'Spread with portraits', 'tales-portraits.jpg', true]],
       [[1.5, 'Spread with photographs of the artist at work in her studio', 'tales-studio.jpg', true], [1.5, 'Black-and-white spread with paintings in empty interiors', 'tales-interiors.jpg', true]],
     ],
+    ru: {
+      cat: 'Книги', title: 'Сказки и прочее: книга работ художницы Кати Рожковой',
+      sub: 'Двуязычный каталог проектов художницы в заброшенных усадьбах: живопись, графика, объекты и фотография.',
+      meta: { 'Год': '2026', 'Задачи': 'Дизайн книги, вёрстка' },
+      cover: 'Обложка книги «Сказки и прочее»',
+      note: 'Катя Рожкова создаёт объекты, живопись и графику. Основные проекты связаны с историческими домами, в которых место становится частью художественного высказывания. В книге собраны четыре большие серии и глава с другими работами.<br><br>Вёрстка движется так же, как человек идёт по этим домам: фотографии комнат во весь разворот чередуются с работами, поставленными небольшим форматом на белых страницах, от общего вида к детали. Было важно сохранить много воздуха: он даёт каждой странице дышать и оставляет работы в центре внимания читателя. Каждая глава открывается крупным планом своего здания: стёртая половица, облупившаяся штукатурка, выцветшие обои. Тексты идут параллельно на русском и английском, а в конце книги биография художницы и интервью.',
+      list: ['Введение', 'Белая школа', 'Игра в Турлики', 'Nabokov Lab.', 'Сад', 'Об авторе', 'Интервью'],
+    },
   },
   comet: {
     cat: 'Books', title: 'Hale-Bopp C/1995 O1: a book in two parallel parts, mirroring a comet with two tails',
@@ -433,6 +564,14 @@ const projects = {
       [[1.5, 'Spread', 'comet-2.jpg', true], [1.5, 'Spread', 'comet-3.jpg', true]],
       [[1.5, 'Spread', 'comet-4.jpg', true], [1.5, 'Fold-out comet poster', 'comet-5.jpg', true]],
     ],
+    ru: {
+      cat: 'Книги', title: 'Hale-Bopp C/1995 O1: книга про комету с двумя хвостами',
+      sub: 'Исследование, подбор изображений, редактура текстов и вёрстка: книга создана с нуля и показана на фестивале «Типомания» в Москве.',
+      meta: { 'Год': '2018', 'Задачи': 'Дизайн книги', 'Показана': 'Фестиваль «Типомания», Москва', 'Ссылки': '<a href="https://drive.google.com/file/d/1bc2r0FXaH4ksEfMlPn0BRjvtBx5grup2/view?usp=sharing" target="_blank" rel="noopener">Смотреть книгу ↗</a>' },
+      cover: 'Обложка книги Hale-Bopp C/1995 O1',
+      note: 'У кометы Хейла-Боппа два хвоста, и её одновременно открыли два учёных, работавших независимо друг от друга. Поэтому каждая глава поделена на две части, которые размещены в начале и в конце книги, а в центре находится раскладной постер с кометой, которая как будто прилетает в руки зрителя.',
+      list: ['Кометы в истории искусства', 'Глоссарий', 'Биографии первооткрывателей', 'Визуальная хронология', 'Комета прилетает + постер с составом кометы'],
+    },
   },
   memories: {
     cat: 'Books', title: 'Twentieth Century Collection: a book about fading memories, whose stories disappear page by page',
@@ -444,6 +583,13 @@ const projects = {
       [[1.5, 'Folded translucent pages', 'memories-1.jpg', true], [1.5, 'A lighter and its story printed on the page', 'memories-2.jpg', true]],
       [[1.5, 'A stone showing through the page', 'memories-4.jpg', true], [1.5, 'Objects showing through the pages', 'memories-3.jpg', true]],
     ],
+    ru: {
+      cat: 'Книги', title: 'Twentieth Century Collection: книга об угасающих воспоминаниях, где истории исчезают страница за страницей',
+      sub: 'Вещи, оставшиеся после отношений, напечатанные на полупрозрачных страницах.',
+      meta: { 'Год': '2019', 'Задачи': 'Дизайн книги, личный проект' },
+      cover: 'Обложка книги Twentieth Century Collection',
+      note: 'Книга сделана из коллекции вещей, оставшихся после отношений. Тексты рассказывают истории, связанные с каждым предметом. Они напечатаны на внутренней стороне полупрозрачных страниц и постепенно исчезают по мере чтения, как исчезает память.',
+    },
   },
 };
 /* projects shown on the homepage, in homepage order; drives prev / next.
@@ -452,11 +598,20 @@ const order = ['retail', 'mamoy', 'relaxika', 'polyatus', 'hotdog', 'sungir', 'b
 
 /* ---------- render ---------- */
 /* bump ASSET_V whenever image files are replaced under the same name, so browsers drop the cached copy */
-const ASSET_V = '20';
+const ASSET_V = '21';
 const id = 'mamoy';
-const p = projects[id] || projects[order[0]];
+const base = projects[id] || projects[order[0]];
 const key = projects[id] ? id : order[0];
-document.title = p.title.split(':')[0] + ' · Elizabeth Vavilova Del Rio';
+/* Russian version (published under /ru/, <html lang="ru">): the fields in a project's ru: { … } replace the English ones.
+   ru.sections merge by index (title, text); ru.caps translates captions by their English text; ru.texts translates
+   the text of image + text pairs by image file name. Anything without a translation stays in English. */
+const RU = document.documentElement.lang === 'ru';
+const tr = (RU && base.ru) || {};
+const p = Object.assign({}, base, tr);
+if (tr.sections) p.sections = base.sections.map((s, n) => Object.assign({}, s, tr.sections[n]));
+const trc = s => (tr.caps && tr.caps[s]) || s;
+const shortTitle = k => ((RU && projects[k].ru && projects[k].ru.title) || projects[k].title).split(':')[0];
+document.title = p.title.split(':')[0] + ' · ' + (RU ? 'Елизавета Вавилова дель Рио' : 'Elizabeth Vavilova Del Rio');
 /* frameBg: colour of the photo frames on this project's page (default is the site-wide light grey) */
 if (p.frameBg) document.documentElement.style.setProperty('--frame', p.frameBg);
 
@@ -479,7 +634,8 @@ if (p.list) blocks.push(`<ul class="list reveal">${p.list.map(li => `<li>${li}</
 /* a frame is [ratio, caption, image?, options?]; the caption always serves as alt text.
    options: true = hide the caption, or { nocap, contain (show the whole image, e.g. a logo), wide (span both columns on desktop),
    pos (which part of the image to keep when the frame crops it, e.g. 'center 38%'), bg (frame colour) } */
-const frame = ([r, cap, img, o]) => {
+const frame = ([r, capEn, img, o]) => {
+  const cap = trc(capEn);
   const opt = o === true ? { nocap: true } : Object.assign({}, o || {});
   /* captions are shown only on projects with captions: true; the caption still serves as alt text */
   if (!p.captions) opt.nocap = true;
@@ -491,8 +647,8 @@ const frame = ([r, cap, img, o]) => {
     : `<figure class="ph ${orient}" style="--r:${r}"><span>${r} : 1</span><figcaption>${cap}</figcaption></figure>`;
 };
 /* a row item is a frame, an array of frames = a stack in one column, or { text, img, r, cap, bg } = image + text side by side */
-const pair = ({ text, img, r, cap, bg }) =>
-  `<div class="pair"><figure class="ph has-img" style="--r:${r}${bg ? ';background:' + bg : ''}"><img loading="lazy" src="assets/img/${img}?v=${ASSET_V}" alt="${cap || ''}"></figure><div class="pair-text"><p>${text}</p></div></div>`;
+const pair = ({ text, img, r, cap, bg, wide }) =>
+  `<div class="pair${wide ? ' wide' : ''}"><figure class="ph has-img" style="--r:${r}${bg ? ';background:' + bg : ''}"><img loading="lazy" src="assets/img/${img}?v=${ASSET_V}" alt="${trc(cap || '')}"></figure><div class="pair-text"><p>${(tr.texts && tr.texts[img]) || text}</p></div></div>`;
 const rows = gallery => gallery.map(row => `<div class="row reveal">${row.map(item =>
   Array.isArray(item) ? (Array.isArray(item[0]) ? `<div class="stack">${item.map(frame).join('')}</div>` : frame(item)) : pair(item)).join('')}</div>`).join('');
 if (p.gallery) blocks.push(`<div class="gallery">${rows(p.gallery)}</div>`);
@@ -506,8 +662,8 @@ document.getElementById('blocks').innerHTML = blocks.join('');
 /* prev / next */
 const i = order.indexOf(key);
 const prev = order[(i - 1 + order.length) % order.length], next = order[(i + 1) % order.length];
-document.getElementById('nextprev').innerHTML = [[prev, '← Previous'], [next, 'Next →']].map(([k, lab]) =>
-  `<a class="np reveal" href="${k}/"><div class="frame ph"><img loading="lazy" src="assets/img/${projects[k].card || 'covers/' + k + '.jpg'}" alt="${projects[k].title.split(':')[0]}"></div><div class="lab"><b>${projects[k].title.split(':')[0]}</b><span>${lab}</span></div></a>`).join('');
+document.getElementById('nextprev').innerHTML = [[prev, RU ? '← Предыдущий' : '← Previous'], [next, RU ? 'Следующий →' : 'Next →']].map(([k, lab]) =>
+  `<a class="np reveal" href="${k}/"><div class="frame ph"><img loading="lazy" src="assets/img/${projects[k].card || 'covers/' + k + '.jpg'}" alt="${shortTitle(k)}"></div><div class="lab"><b>${shortTitle(k)}</b><span>${lab}</span></div></a>`).join('');
 
 /* reveal on scroll */
 const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -10% 0px' });

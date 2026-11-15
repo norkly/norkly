@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Обо мне · Елизавета Вавилова дель Рио</title>
+<meta name="description" content="Бренд-дизайнер с десятилетним опытом в IKEA. Живу в Белграде, открыта к проектам в брендинге, ритейле и упаковке.">
+<link rel="canonical" href="https://norklydesign.com/ru/about.html">
+<link rel="alternate" hreflang="en" href="https://norklydesign.com/about.html">
+<link rel="alternate" hreflang="ru" href="https://norklydesign.com/ru/about.html">
+<link rel="alternate" hreflang="x-default" href="https://norklydesign.com/about.html">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Елизавета Вавилова дель Рио">
+<meta property="og:title" content="Обо мне · Елизавета Вавилова дель Рио">
+<meta property="og:description" content="Бренд-дизайнер с десятилетним опытом в IKEA. Живу в Белграде, открыта к проектам в брендинге, ритейле и упаковке.">
+<meta property="og:url" content="https://norklydesign.com/ru/about.html">
+<meta property="og:image" content="https://norklydesign.com/assets/img/share/about.jpg?v=896f5a68">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --ink: #111111; --muted: #6b6b6b; --line: #e2e2e2; --chip: #ececec; --frame: #e4e4e4; --dark: #3A3A3A;
+    --gutter: 28px; --gap: 12px; --radius: 12px;
+    --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.35; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  em { font-style: normal; font-weight: 600; }
+  .ph { background: var(--frame); color: var(--muted); font-size: 12px; display: grid; place-items: center; border-radius: var(--radius); }
+
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 18px var(--gutter); font-size: 14px; }
+  .bar .right { display: flex; gap: 22px; }
+  .bar a:hover, .bar a.on { text-decoration: underline; text-underline-offset: 3px; }
+  /* on narrow screens the eye mark replaces the name, which does not fit next to the menu (not on the homepage) */
+  .bar .mark { display: none; height: 16px; width: auto; }
+
+  /* hero: portrait + statement */
+  .hero { padding: 5vh var(--gutter) 0; display: grid; grid-template-columns: minmax(240px, 380px) 1fr; gap: 56px; align-items: start; }
+  .portrait { aspect-ratio: 1; border-radius: var(--radius); overflow: hidden; background: var(--frame); }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero h1 { margin: 0; max-width: 20ch; font-weight: 400; font-size: clamp(30px, 3.8vw, 58px); line-height: 1.06; letter-spacing: -.03em; }
+  .hero .bio { max-width: 58ch; margin: 28px 0 0; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; color: #2b2b2b; }
+  .hero .bio + .bio { margin-top: 14px; }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+  .hero .cta a { font-size: 14px; padding: 10px 15px; border-radius: 999px; background: var(--chip); }
+  .hero .cta a.primary { background: var(--dark); color: #fff; }
+
+  /* sections */
+  section.block { padding: 72px var(--gutter) 0; }
+  .block h2 { margin: 0 0 24px; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+
+  /* experience rows */
+  .exp { list-style: none; margin: 0; padding: 0; }
+  .exp li { display: grid; grid-template-columns: 150px 1fr 1fr; gap: 28px; padding: 20px 0; border-top: 1px solid var(--line); align-items: start; }
+  .exp li:last-child { border-bottom: 1px solid var(--line); }
+  .exp .years { font-size: 14px; color: var(--muted); padding-top: 4px; }
+  .exp h3 { margin: 0; font-weight: 600; font-size: clamp(18px, 1.5vw, 22px); letter-spacing: -.015em; }
+  .exp h3 span { display: block; font-weight: 400; color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .exp p { margin: 0; font-size: 15px; line-height: 1.5; color: #2b2b2b; max-width: 56ch; }
+
+  /* skills: 2 × 2 cells like the project pages */
+  .cells { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 48px; max-width: 1100px; }
+  .cell { border-top: 1px solid var(--line); padding-top: 16px; }
+  .cell h3 { margin: 0 0 10px; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .cell ul { list-style: none; margin: 0; padding: 0; font-size: clamp(15px, 1.15vw, 17px); line-height: 1.5; }
+  .cell li { padding: 7px 0; border-bottom: 1px solid var(--line); }
+  .cell li:last-child { border-bottom: 0; }
+  .cell.wide { grid-column: 1 / -1; }
+  .tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .tools span { font-size: 13px; padding: 7px 12px; border-radius: 999px; background: var(--chip); }
+  .todo { color: var(--muted); font-size: 14px; }
+
+  /* dark footer */
+  .bottom { margin-top: 80px; background: var(--dark); color: #fff; }
+  .about { padding: 56px var(--gutter) 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+  .about h2 { margin: 0; max-width: 26ch; font-weight: 400; font-size: clamp(24px, 2.6vw, 38px); line-height: 1.1; letter-spacing: -.025em; }
+  .about .where { margin: 12px 0 0; color: #bdbdbd; font-size: 15px; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .contacts a { font-size: 14px; padding: 10px 15px; border-radius: 999px; background: #4f4f4f; }
+  .contacts a.primary { background: #fff; color: var(--ink); }
+  footer { padding: 48px var(--gutter) 30px; display: flex; justify-content: space-between; font-size: 13px; color: #bdbdbd; }
+
+  .rise { opacity: 0; transform: translateY(28px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rise, .reveal { opacity: 1; transform: none; animation: none; transition: none; } }
+
+  @media (max-width: 900px) {
+    :root { --gutter: 16px; }
+    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; }
+    .bar .mark { display: block; } .bar .name { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 28px; }
+    .portrait { max-width: 240px; }
+    section.block { padding-top: 56px; }
+    .exp li { grid-template-columns: 1fr; gap: 8px; padding: 18px 0; }
+    .cells { grid-template-columns: 1fr; gap: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="index.html" aria-label="Елизавета Вавилова дель Рио"><img class="mark" src="/assets/img/eye-01.svg" alt=""><span class="name">Елизавета Вавилова дель Рио</span></a>
+  <nav class="right">
+    <a href="index.html#work">Работы</a>
+    <a class="on" href="about.html">Обо мне</a>
+    <a href="reviews.html">Отзывы</a>
+    <a href="#contact">Контакты</a>
+    <a class="lang" href="/about.html">EN</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="portrait rise"><img src="/assets/img/portrait.jpg" alt="Elizabeth Vavilova Del Rio"></div>
+  <div>
+    <h1 class="rise" style="--d:.08s">Бренд-дизайнер с <em>десятилетним опытом в IKEA</em>. Живу в Белграде и открыта к проектам.</h1>
+    <p class="bio rise" style="--d:.16s">Я работаю с несколькими направлениями: покупательский опыт, дизайн для ритейла, айдентика, упаковка и дизайн книг. В IKEA я отвечала за графические решения для новых магазинов и перестройки отделов, была арт-директором коммерческих кампаний для 20 магазинов в России и Юго-Восточной Европе и вела обучающие программы по айдентике бренда для команд ритейла, маркетинга и продаж.</p>
+    <p class="bio rise" style="--d:.2s">Параллельно я разрабатываю айдентику для небольших и растущих компаний (термопосуда, доставка еды, строительство, фитнес) и занимаюсь арт-проектами.</p>
+    <div class="cta rise" style="--d:.28s">
+      <a class="primary" href="https://www.linkedin.com/in/lizadelrio/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Опыт</h2>
+  <ul class="exp reveal">
+    <li><div class="years">2022 – 2026</div><h3>Ведущий графический дизайнер <span>Сервисный офис IKEA, Юго-Восточная Европа</span></h3><p>Арт-дирекшн 14 интегрированных кампаний 360° и ключевых визуалов; единая POSM-коммуникация в 6 магазинах 4 стран за счёт гайдлайнов и общих процессов; команда из 3–4 специалистов, которая готовила омниканальные решения для 6 магазинов. Была наставником региональной команды из 12 человек и провела 11 тренингов по визуальной айдентике IKEA.</p></li>
+    <li><div class="years">2019 – 2022</div><h3>Старший графический дизайнер <span>Сервисный офис IKEA, Россия</span></h3><p>Коммуникационные стратегии и графические решения, которые я представляла более чем 300 стейкхолдерам из отделов продаж, маркетинга и дизайна магазинов; ведущий дизайнер в проекте с глобальной командой IKEA в Швеции по обновлению отдела, внедрённому более чем в 150 магазинах по всему миру; редизайн главной страницы сайта IKEA Россия по Agile.</p></li>
+    <li><div class="years">2015 – 2019</div><h3>Дизайнер графических коммуникаций <span>Магазин IKEA, Россия</span></h3><p>Проекты графической коммуникации под ключ, от брифа до внедрения; коммуникация в магазине и графические системы для ритейла в 16 отделах; вводные материалы и гайдлайны для новых сотрудников.</p></li>
+    <li><div class="years">2018 – 2026</div><h3>Арт-директор <span>Фриланс</span></h3><p>Развитие брендов от исследования рынка и концепции до внедрения и запуска: айдентика, гайдлайны и системы коммуникации для компаний в ритейле, общепите, строительстве и велнесе. Масштабируемые бренд-системы, единые в упаковке, рекламе, диджитале и печати, включая долгосрочный ребрендинг, который поддержал развитие франшизы и рост бизнеса.</p></li>
+  </ul>
+</section>
+
+<section class="block">
+  <h2>Навыки</h2>
+  <div class="cells reveal">
+    <div class="cell"><h3>Айдентика</h3><ul>
+      <li>Системы визуальной айдентики: логотип, типографика, цвет, сетка</li><li>Разработка концепции и креативное руководство</li><li>Гайдлайны и документация бренда</li><li>Ребрендинг действующего бизнеса</li>
+    </ul></div>
+    <div class="cell"><h3>Точки контакта бренда</h3><ul>
+      <li>Дизайн упаковки</li><li>Коммуникация в ритейле, вывески и навигация</li><li>Кампании 360° и ключевые визуалы</li><li>Диджитал: сайты, соцсети, презентации</li>
+    </ul></div>
+    <div class="cell"><h3>Системы и работа с командами</h3><ul>
+      <li>Масштабирование бренда на рынки, магазины и команды</li><li>Шаблоны и повторно используемые компоненты бренда</li><li>Презентация и защита дизайн-решений перед стейкхолдерами</li><li>Обучение бренду и наставничество</li>
+    </ul></div>
+    <div class="cell"><h3>Производство</h3><ul>
+      <li>Печать, допечатная подготовка и требования к широкоформатной печати</li><li>Материалы и отделка для вывесок и упаковки</li>
+    </ul></div>
+    <div class="cell wide"><h3>Инструменты и языки</h3>
+      <div class="tools"><span>Illustrator</span><span>InDesign</span><span>Photoshop</span><span>Figma</span><span>After Effects</span><span>Nano Banana</span><span>Claude</span><span>ComfyUI</span></div>
+      <ul style="margin-top:18px">
+        <li>Английский — B2</li>
+        <li>Русский — родной</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Образование</h2>
+  <ul class="exp reveal">
+    <li><div class="years">2017 – 2018</div><h3>Графический дизайн и типографика <span>Образовательные проекты Александра Васина и Натальи Вельчинской, T_24</span></h3><p></p></li>
+    <li><div class="years">2011 – 2015</div><h3>Специалист по видеоарту <span>Московская школа фотографии и мультимедиа им. А. Родченко</span></h3><p></p></li>
+    <li><div class="years">2007 – 2011</div><h3>Рисунок и живопись <span>МГАХУ памяти 1905 года · мастерские Андрея Коровина и Марии Кречетовой</span></h3><p></p></li>
+  </ul>
+  </div>
+</section>
+
+<div class="bottom" id="contact">
+  <section class="about">
+    <div>
+      <h2><em>Открыта к проектам</em> в штате или на фрилансе</h2>
+      <p class="where">Живу в Белграде, Сербия · работаю с командами по всей Европе</p>
+    </div>
+    <div class="contacts">
+      <a class="primary" href="mailto:elvaderi@gmail.com">elvaderi@gmail.com</a>
+      <a href="https://t.me/Norkly" target="_blank" rel="noopener">Telegram @norkly</a>
+      <a href="https://wa.me/381641486690" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </section>
+  <footer><span>© 2026 Елизавета Вавилова дель Рио</span><a href="index.html">Все работы ↑</a></footer>
+</div>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

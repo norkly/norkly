@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Елизавета Вавилова дель Рио — бренд-дизайнер</title>
+<meta name="description" content="Создаю бренды, которые люди встречают в реальном пространстве: магазины, упаковка, вывески и рекламные кампании. Десять лет в IKEA, сейчас живу в Белграде.">
+<link rel="canonical" href="https://norklydesign.com/ru/">
+<link rel="alternate" hreflang="en" href="https://norklydesign.com/">
+<link rel="alternate" hreflang="ru" href="https://norklydesign.com/ru/">
+<link rel="alternate" hreflang="x-default" href="https://norklydesign.com/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Елизавета Вавилова дель Рио">
+<meta property="og:title" content="Елизавета Вавилова дель Рио — бренд-дизайнер">
+<meta property="og:description" content="Создаю бренды, которые люди встречают в реальном пространстве: магазины, упаковка, вывески и рекламные кампании. Десять лет в IKEA, сейчас живу в Белграде.">
+<meta property="og:url" content="https://norklydesign.com/ru/">
+<meta property="og:image" content="https://norklydesign.com/assets/img/share/home.jpg?v=2d42cbbe">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --ink: #111111; --muted: #6b6b6b; --line: #e2e2e2; --chip: #ececec; --frame: #e4e4e4; --dark: #3A3A3A;
+    --gutter: 28px; --gap: 10px; --radius: 12px;
+    --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.35; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  em { font-style: normal; font-weight: 600; }
+  .ph { background: var(--frame); color: var(--muted); font-size: 12px; display: grid; place-items: center; }
+
+  /* top bar */
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 18px var(--gutter); font-size: 14px; }
+  .bar .right { display: flex; gap: 22px; }
+  .bar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  /* hero: statement + three facts */
+  .hero { padding: 7vh var(--gutter) 40px; }
+  /* logo sits to the left of the statement, aligned to its first line */
+  .lead { display: grid; grid-template-columns: clamp(120px, 14vw, 200px) 1fr; gap: 40px; align-items: start; }
+  .logo { width: 100%; height: auto; display: block; margin-top: .35em; }
+  .hero h1 { margin: 0; max-width: 24ch; font-weight: 400; font-size: clamp(32px, 4.6vw, 48px); line-height: 1.04; letter-spacing: -.03em; }
+  .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 220px)); gap: 28px; margin-top: 56px; }
+  .fact { border-top: 1px solid var(--ink); padding-top: 12px; }
+  .fact .num { font-weight: 600; font-size: clamp(44px, 4.6vw, 72px); line-height: .9; letter-spacing: -.03em; }
+  .fact p { margin: 10px 0 0; font-size: 13px; color: var(--muted); line-height: 1.35; }
+  /* desktop: facts stand in a column to the right of the statement, top-aligned with it */
+  @media (min-width: 901px) {
+    .hero { display: grid; grid-template-columns: 1fr minmax(240px, 28%); gap: 72px; align-items: start; }
+    .facts { grid-template-columns: 1fr; gap: 26px; margin-top: .3em; }
+    .fact { border-top: 0; padding-top: 0; }
+    .fact .num { font-size: clamp(36px, 3.2vw, 48px); }
+  }
+
+  /* filters */
+  .filters { display: flex; gap: 6px; flex-wrap: wrap; padding: 0 var(--gutter) 18px; }
+  .filters button { font: inherit; font-size: 14px; border: 0; background: var(--chip); padding: 9px 15px; border-radius: 999px; cursor: pointer; color: var(--ink); }
+  .filters button:hover { background: #dedede; }
+  .filters button.on { background: var(--dark); color: #fff; }
+
+  /* grid: equal 16:9 frames — one column on mobile/tablet, two per row on desktop (>900px) */
+  .grid { display: grid; grid-template-columns: 1fr; gap: 24px 16px; padding: 0 var(--gutter); }
+  .tile { display: block; transition: opacity .3s ease, transform .5s cubic-bezier(.2,.7,.2,1); }
+  /* cover frame: 16:9, grey until an image is set; the image zooms slightly on hover */
+  .tile .frame { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); background: var(--frame); overflow: hidden; transition: background .3s ease; }
+  .tile .frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+  .tile:hover .frame img { transform: scale(1.04); }
+  .tile:hover .frame { background: #d9d9d9; }
+  .tile .ratio { position: absolute; inset: 0; display: grid; place-items: center; font-size: 12px; color: var(--muted); }
+  /* caption sits under the cover */
+  .tile .cap { display: flex; flex-direction: column; gap: 2px; margin-top: 10px; font-size: 14px; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+  .tile:hover .cap { transform: translateX(4px); }
+  .tile .cap b { font-weight: 600; }
+  .tile .cap span { color: var(--muted); }
+  .tile.hide { display: none; }
+
+  @media (min-width: 901px) {
+    .grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+    .tile .cap { flex-direction: row; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 15px; }
+  }
+
+  /* footer: photo + open to work + contacts */
+  .bottom { margin-top: 70px; background: var(--dark); color: #fff; }
+  .about { padding: 56px var(--gutter) 0; display: grid; grid-template-columns: minmax(200px, 300px) 1fr; gap: 40px; align-items: end; }
+  .about .photo { aspect-ratio: 1; border-radius: var(--radius); background: #555; color: #bdbdbd; overflow: hidden; }
+  .about .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about h2 { margin: 0; max-width: 26ch; font-weight: 400; font-size: clamp(26px, 3vw, 44px); line-height: 1.1; letter-spacing: -.025em; }
+  .about .where { margin: 14px 0 0; color: #bdbdbd; font-size: 15px; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+  .contacts a { font-size: 14px; padding: 10px 15px; border-radius: 999px; background: #4f4f4f; }
+  .contacts a:hover { background: #5c5c5c; }
+  .contacts a.primary { background: #fff; color: var(--ink); }
+  footer { padding: 48px var(--gutter) 30px; display: flex; justify-content: space-between; font-size: 13px; color: #bdbdbd; }
+
+  /* ---------- motion ---------- */
+  /* on load: header items rise one after another */
+  .rise { opacity: 0; transform: translateY(28px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  /* on scroll: tiles and the footer float in when they enter the viewport */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .rise, .reveal { opacity: 1; transform: none; animation: none; transition: none; }
+    .tile::before, .tile .cap { transition: none; }
+  }
+
+  @media (max-width: 900px) {
+    :root { --gutter: 16px; --gap: 8px; }
+    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; }
+    /* the name stays while it fits next to the menu with a 20px gap; when it does not, it wraps to a second line
+       that the fixed height cuts off, so only the menu is left (other pages show the eye mark instead) */
+    .bar { flex-direction: row-reverse; flex-wrap: wrap; gap: 40px 20px; height: 54px; overflow: hidden; } .bar .right { order: -1; }
+    .lead { grid-template-columns: 1fr; gap: 28px; }
+    .hero h1 { max-width: 24ch; }
+    .logo { width: 96px; margin-top: 0; }
+    .facts { grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 40px; }
+    .about { grid-template-columns: 1fr; gap: 24px; }
+    .about .photo { max-width: 220px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="#">Елизавета Вавилова дель Рио</a>
+  <nav class="right">
+    <a href="#work">Работы</a>
+    <a href="about.html">Обо мне</a>
+    <a href="reviews.html">Отзывы</a>
+    <a href="#about">Контакты</a>
+    <a class="lang" href="/">EN</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="lead">
+    <!-- the eye is inline (same drawing as /assets/img/eye-01.svg) so the script below can move the pupil after the cursor;
+         the pupil is clipped by the outer contour, so it never sticks out of the eye -->
+    <svg class="logo rise" id="eye" viewBox="0 0 478.52 301.36" role="img" aria-label="Elizabeth Vavilova Del Rio — logo">
+      <defs><clipPath id="eye-shape"><path d="M239.26,301.36c-43.76,0-83.44-7.49-117.93-22.26c-27.96-11.97-52.53-28.7-73.04-49.71c-35.15-36.02-46.21-72.35-46.66-73.88L0,150l2.04-5.37c0.57-1.51,14.46-37.3,50.73-72.92c21.24-20.86,45.87-37.49,73.21-49.41C159.92,7.5,198.03,0,239.26,0c41.23,0,79.34,7.5,113.28,22.3c27.33,11.92,51.97,28.54,73.21,49.41c36.26,35.62,50.15,71.41,50.73,72.92l2.04,5.37l-1.63,5.51c-0.45,1.53-11.5,37.87-46.66,73.88c-20.51,21.01-45.08,37.73-73.04,49.71C322.7,293.87,283.02,301.36,239.26,301.36z"/></clipPath></defs>
+      <path d="M239.26,301.36c-43.76,0-83.44-7.49-117.93-22.26c-27.96-11.97-52.53-28.7-73.04-49.71c-35.15-36.02-46.21-72.35-46.66-73.88L0,150l2.04-5.37c0.57-1.51,14.46-37.3,50.73-72.92c21.24-20.86,45.87-37.49,73.21-49.41C159.92,7.5,198.03,0,239.26,0c41.23,0,79.34,7.5,113.28,22.3c27.33,11.92,51.97,28.54,73.21,49.41c36.26,35.62,50.15,71.41,50.73,72.92l2.04,5.37l-1.63,5.51c-0.45,1.53-11.5,37.87-46.66,73.88c-20.51,21.01-45.08,37.73-73.04,49.71C322.7,293.87,283.02,301.36,239.26,301.36z M36.27,151.3c4.17,10.21,15.18,33.05,37.54,55.55c39.92,40.15,95.58,60.51,165.45,60.51c69.87,0,125.54-20.36,165.45-60.51c22.36-22.5,33.38-45.34,37.54-55.55c-4.96-10.25-17.77-33.49-41.41-56.38C359.1,54.5,304.73,34,239.26,34S119.42,54.5,77.67,94.92C54.05,117.79,41.24,141.01,36.27,151.3z"/>
+      <g clip-path="url(#eye-shape)"><circle id="pupil" cx="239.26" cy="150.68" r="104.62" transform="translate(30.1 0)"/></g>
+    </svg>
+    <h1 class="rise" style="--d:.08s">Я создаю <em>дизайн, который люди встречают в реальности</em>: айдентика, упаковки, навигация и рекламные кампании.</h1>
+  </div>
+  <div class="facts">
+    <div class="fact rise" style="--d:.15s"><div class="num">10</div><p>лет в IKEA в России и Юго-Восточной Европе в роли старшего графического дизайнера</p></div>
+    <div class="fact rise" style="--d:.25s"><div class="num">32+</div><p>коммерческих кампаний для IKEA</p></div>
+    <div class="fact rise" style="--d:.35s"><div class="num">6</div><p>фирменных стилей запущено на рынок</p></div>
+  </div>
+</section>
+
+<div class="filters rise" id="filters" style="--d:.5s">
+  <button class="on" data-f="all">Все</button>
+  <button data-f="retail">Ритейл</button>
+  <button data-f="brand">Айдентика</button>
+  <button data-f="logo">Логотипы</button>
+  <button data-f="art">Книги</button>
+</div>
+
+<main class="grid" id="work">
+  <!-- covers: /assets/img/covers/<name>.jpg, 1600×900; a frame without <img> shows a grey placeholder -->
+  <a class="tile" data-f="retail" href="retail/"><div class="frame"><img src="/assets/img/covers/retail.jpg" alt="IKEA store"></div><div class="cap"><b>IKEA: дизайн для ритейла</b><span>Дизайн для ритейла, арт-дирекшн · 2015 – 2026</span></div></a>
+  <a class="tile" data-f="brand" href="mamoy/"><div class="frame"><img src="/assets/img/covers/mamoy.jpg" alt="Mamoy Klyanus packaging"></div><div class="cap"><b>Мамой Клянусь</b><span>Ребрендинг, упаковка · 2018 – 2026</span></div></a>
+  <a class="tile" data-f="brand" href="relaxika/"><div class="frame"><img src="/assets/img/covers/relaxika.jpg" alt="Relaxika thermos packaging"></div><div class="cap"><b>Relaxika</b><span>Брендинг, упаковка · 2020 – 2025</span></div></a>
+  <a class="tile" data-f="brand" href="polyatus/"><div class="frame"><img src="/assets/img/covers/polyatus.jpg" alt="Polyatus and Sinchuk identity"></div><div class="cap"><b>Полятус и Синчук</b><span>Ребрендинг, наружная реклама, сайт · 2025</span></div></a>
+<a class="tile" data-f="logo" href="hotdog/"><div class="frame"><img src="/assets/img/covers/hotdog.jpg" alt="Hot Dog Water logotype"></div><div class="cap"><b>Hot Dog Water</b><span>Логотип, мерч · 2026</span></div></a>
+  <a class="tile" data-f="logo" href="sungir/"><div class="frame"><img src="/assets/img/covers/sungir.jpg" alt="Sungir logotype"></div><div class="cap"><b>Сунгирь</b><span>Логотип, тендер · 2024</span></div></a>
+  <a class="tile" data-f="logo" href="bsma/"><div class="frame"><img src="/assets/img/covers/bsma.jpg" alt="BSMA logotype"></div><div class="cap"><b>BSMA</b><span>Логотип, интерьер, вывески · 2021</span></div></a>  <a class="tile" data-f="art" href="tales/"><div class="frame"><img src="/assets/img/covers/tales-home.jpg" alt="Tales and Other Things — painting from the book cover"></div><div class="cap"><b>Сказки и прочее</b><span>Дизайн книги · 2026</span></div></a>
+  <a class="tile" data-f="art" href="comet/"><div class="frame"><img src="/assets/img/covers/comet.jpg?v=2" alt="Hale-Bopp book"></div><div class="cap"><b>Hale-Bopp C/1995 O1</b><span>Дизайн книги · 2018</span></div></a>
+  <a class="tile" data-f="art" href="memories/"><div class="frame"><img src="/assets/img/covers/memories.jpg" alt="Twentieth Century Collection book"></div><div class="cap"><b>Twentieth Century Collection</b><span>Дизайн книги · 2019</span></div></a></main>
+
+<div class="bottom">
+<section class="about reveal" id="about">
+  <div class="photo"><img src="/assets/img/portrait.jpg" alt="Elizabeth Vavilova Del Rio"></div>
+  <div>
+    <h2><em>Открыта к проектам</em> в штате или на фрилансе</h2>
+    <p class="where">Живу в Белграде, Сербия · работаю с командами по всей Европе</p>
+    <div class="contacts">
+      <a class="primary" href="mailto:elvaderi@gmail.com">elvaderi@gmail.com</a>
+      <a href="https://t.me/Norkly" target="_blank" rel="noopener">Telegram @norkly</a>
+      <a href="https://wa.me/381641486690" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer><span>© 2026 Елизавета Вавилова дель Рио</span><a href="#" onclick="scrollTo({top:0,behavior:'smooth'});return false;">Наверх ↑</a></footer>
+</div>
+
+<script>
+  const btns = [...document.querySelectorAll('#filters button')];
+  const tiles = [...document.querySelectorAll('.tile')];
+  btns.forEach(b => b.onclick = () => {
+    btns.forEach(x => x.classList.toggle('on', x === b));
+    const f = b.dataset.f;
+    tiles.forEach(t => t.classList.toggle('hide', f !== 'all' && t.dataset.f !== f));
+  });
+
+  // Reveal on scroll: tiles get a small stagger within the same row so they don't all pop at once
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { rootMargin: '0px 0px -10% 0px' });
+  tiles.forEach((t, i) => { t.classList.add('reveal'); t.style.setProperty('--d', (i % 3) * .08 + 's'); io.observe(t); });
+  io.observe(document.getElementById('about'));
+
+  // The pupil follows the cursor (and glances at a tap on touch screens).
+  // It moves inside an ellipse of 50 x 14 units around the centre of the eye and eases towards its target;
+  // until the pointer moves it stays where the logo has it, looking slightly to the right.
+  (() => {
+    const eye = document.getElementById('eye'), pupil = document.getElementById('pupil');
+    if (!eye || !pupil || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const RX = 50, RY = 14, REACH = 250;          // range in drawing units; cursor distance (px) at which the pupil is at its limit
+    let x = 30.1, y = 0, tx = x, ty = y, raf = 0;
+    const step = () => {
+      x += (tx - x) * .18; y += (ty - y) * .18;
+      pupil.setAttribute('transform', `translate(${x.toFixed(2)} ${y.toFixed(2)})`);
+      raf = Math.abs(tx - x) + Math.abs(ty - y) > .05 ? requestAnimationFrame(step) : 0;
+    };
+    const look = e => {
+      const r = eye.getBoundingClientRect();
+      const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+      const d = Math.hypot(dx, dy) || 1, k = Math.min(1, d / REACH);
+      tx = dx / d * k * RX; ty = dy / d * k * RY;
+      if (!raf) raf = requestAnimationFrame(step);
+    };
+    addEventListener('pointermove', look, { passive: true });
+    addEventListener('pointerdown', look, { passive: true });
+  })();
+</script>
+</body>
+</html>

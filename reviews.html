@@ -6,6 +6,9 @@
 <title>Reviews · Elizabeth Vavilova Del Rio</title>
 <meta name="description" content="What clients and colleagues say about working with Elizabeth Vavilova Del Rio, brand designer.">
 <link rel="canonical" href="https://norklydesign.com/reviews.html">
+<link rel="alternate" hreflang="en" href="https://norklydesign.com/reviews.html">
+<link rel="alternate" hreflang="ru" href="https://norklydesign.com/ru/reviews.html">
+<link rel="alternate" hreflang="x-default" href="https://norklydesign.com/reviews.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Elizabeth Vavilova Del Rio">
 <meta property="og:title" content="Reviews · Elizabeth Vavilova Del Rio">
@@ -36,6 +39,8 @@
   .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 18px var(--gutter); font-size: 14px; }
   .bar .right { display: flex; gap: 22px; }
   .bar a:hover, .bar a.on { text-decoration: underline; text-underline-offset: 3px; }
+  /* on narrow screens the eye mark replaces the name, which does not fit next to the menu (not on the homepage) */
+  .bar .mark { display: none; height: 16px; width: auto; }
 
   .head { padding: 7vh var(--gutter) 40px; }
   .head h1 { margin: 0; max-width: 22ch; font-weight: 400; font-size: clamp(32px, 4.6vw, 48px); line-height: 1.04; letter-spacing: -.03em; }
@@ -78,8 +83,8 @@
 
   @media (max-width: 900px) {
     :root { --gutter: 16px; }
-    /* phone: four menu items do not fit next to the name; Work is hidden, the name already leads to the work */
-    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; } .bar .right a[href$="#work"] { display: none; }
+    .bar { font-size: 13px; } .bar > a { white-space: nowrap; } .bar .right { gap: 14px; }
+    .bar .mark { display: block; } .bar .name { display: none; }
     .reviews { grid-template-columns: 1fr; }
     .review { padding: 24px; }
   }
@@ -88,12 +93,13 @@
 <body>
 
 <header class="bar">
-  <a href="index.html">Elizabeth Vavilova Del Rio</a>
+  <a href="index.html" aria-label="Elizabeth Vavilova Del Rio"><img class="mark" src="assets/img/eye-01.svg" alt=""><span class="name">Elizabeth Vavilova Del Rio</span></a>
   <nav class="right">
     <a href="index.html#work">Work</a>
     <a href="about.html">About</a>
     <a class="on" href="reviews.html">Reviews</a>
     <a href="#contact">Contact</a>
+    <a class="lang" href="/ru/reviews.html">RU</a>
   </nav>
 </header>
 
