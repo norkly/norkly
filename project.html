@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>(function(){var k=new URLSearchParams(location.search).get('p');if(k&&['retail','omnichannel','relaxika','mamoy','polyatus','hotdog','sungir','bsma','logotypes','tales','comet','memories'].indexOf(k)>-1)location.replace('/'+k+'/'+location.hash);})();</script>
+<script>(function(){var k=new URLSearchParams(location.search).get('p');if(k&&['retail','relaxika','mamoy','polyatus','hotdog','sungir','bsma','tales','comet','memories'].indexOf(k)>-1)location.replace('/'+k+'/'+location.hash);})();</script>
 <meta name="description" content="Selected brand identity, retail design, packaging and book design projects.">
 <link rel="canonical" href="https://norklydesign.com/">
 <meta property="og:type" content="website">
@@ -315,23 +315,6 @@ const projects = {
       },
     },
   },
-  omnichannel: {
-    cat: 'Retail design · IKEA SEE', title: 'Omnichannel: end-to-end 360° campaigns for stores in Serbia, Romania, Croatia and Slovenia',
-    sub: 'Leading the execution of seasonal campaigns across in-store, digital and web, briefing agencies and keeping every touchpoint consistent.',
-    meta: { Years: '2022 – 2026', Role: 'Campaign lead, retail communication', Channels: 'In-store, digital screens, website, CG content' },
-    cover: 'Hero: in-store campaign installation',
-    case: [
-      ['Retail communication', 'Designing end-to-end graphic communication solutions and strategies, providing guidelines and implementation instructions, and leading follow-ups to keep improving future campaigns.'],
-      ['Adaptation', 'Every physical touchpoint has its own principles for working with graphic assets. I provide end-to-end solutions with strategies and details for implementation.'],
-      ['Digital', 'Briefing marketing agencies and CG specialists to create digital content for online and in-store use.'],
-      ['Website', 'Collaborating with online specialists to ensure consistent campaign visuals across all channels and banner creation.'],
-    ],
-    note: 'In my daily work I lead the end-to-end execution of 360° marketing campaigns, briefing agencies and ensuring visual consistency across all touchpoints — with project teams of 3–6 people delivering omnichannel solutions for in-store, online and marketing use.',
-    gallery: [
-      [[.53, 'Digital screen'], [.53, 'Digital screen'], [.53, 'Digital screen'], [.75, 'In-store installation']],
-      [[2.16, 'In-store communication'], [1.78, 'CG content']],
-    ],
-  },
   relaxika: {
     cat: 'Brand identity', title: 'Relaxika: a bold thermal-products brand for an active young generation',
     sub: 'Identity, colour system and packaging for five thermos series, cooler bags and accessories.',
@@ -504,7 +487,7 @@ const projects = {
       [[1.5, 'Flyers', 'bsma-flyers.jpg', true], [1.5, 'Entrance signage and window graphics', 'bsma-facade.jpg', true]],
     ],
     ru: {
-      cat: 'Логотипы', title: 'BSMA: Body, Soul, Mind, Alchemy — осознанная айдентика для частной фитнес-студии',
+      cat: 'Логотипы', title: 'BSMA: Body, Soul, Mind, Alchemy — айдентика для приватной фитнес-студии',
       sub: 'Знак построен на структуре молекулы золота и перенесён в интерьер студии и вывески.',
       meta: { 'Год': '2021', 'Задачи': 'Логотип, интерьер, вывески' },
       cover: 'Визитка BSMA',
@@ -515,19 +498,6 @@ const projects = {
         ['Результат', 'Студия успешно запустилась, мы разместили логотип на оборудовании для тренировок, в интерьере студии и во входной зоне. Студия нашла лояльную аудиторию среди занятых профессионалов, а позже начала выпускать экологичные БАДы.'],
       ],
     },
-  },
-  logotypes: {
-    cat: 'Logotypes', title: 'Logofolio: compact marks for travel, sport, music and flower delivery',
-    sub: 'Four small marks, each built on one clear idea.',
-    meta: { Years: '2019 – 2024', Scope: 'Logotypes' },
-    cover: 'Hero: four marks on dark',
-    case: [
-      ['Travel shop', 'Balance and dynamics — qualities that resonate with the active lifestyle of a travel enthusiast.'],
-      ['Personal trainer', 'The client’s first letter combined with the number 1 — the ambition of being first. Minimal and easily scalable.'],
-      ['Musical festival', 'Sound waves and Lissajous curves; the central dot is the listener anchoring the composition.'],
-      ['Flower delivery app', 'A bloom and a globe merged into one geometric symbol — clean and recognizable on digital touchpoints.'],
-    ],
-    gallery: [ [[1.4, 'Flops over peonies'], [1.5, 'Paper bag and card'], [1.88, 'Menu cards']] ],
   },
   tales: {
     cat: 'Books', title: 'Tales and Other Things: a book of artworks by Katya Rozhkova',
@@ -589,8 +559,7 @@ const projects = {
     },
   },
 };
-/* projects shown on the homepage, in homepage order; drives prev / next.
-   omnichannel and logotypes stay reachable by URL but are not in the loop */
+/* projects shown on the homepage, in homepage order; drives prev / next */
 const order = ['retail', 'mamoy', 'relaxika', 'polyatus', 'hotdog', 'sungir', 'bsma', 'tales', 'comet', 'memories'];
 
 /* ---------- render ---------- */
